@@ -1,0 +1,21 @@
+[core]
+  pager = delta
+	excludesfile = $HOME/.gitignore_global
+
+[commit]
+	template = $HOME/.stCommitMsg
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+
+
