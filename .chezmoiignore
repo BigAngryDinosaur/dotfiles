@@ -1,5 +1,8 @@
 
 private_dot_config/private_karabiner/private_automatic_backups/
 
-.oh-my-zsh/cache/completions/
+.oh-my-zsh/cache/
+
+.config/karabiner/automatic_backups
+
 
