@@ -53,6 +53,7 @@ ZSH_THEME="robbyrussell"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_AUTO_UPDATE="true" 
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -116,12 +117,8 @@ export PATH=/Users/rusha.sawant/.local/bin:$PATH
 
 export EDITOR='nvim'
 
-# aliases
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-alias l="eza -la"
-alias lt="eza -T"
-alias e=$EDITOR
 
 # zplug
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
@@ -130,3 +127,8 @@ source $ZPLUG_HOME/init.zsh
 zplug "RiverGlide/zsh-goenv", from:gitlab
 
 [ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
+
+## ZSH Local files
+export ZSH_CONFIG_PATH="$HOME/.config/zsh"
+source $ZSH_CONFIG_PATH/functions.zsh
+source $ZSH_CONFIG_PATH/aliases.zsh
