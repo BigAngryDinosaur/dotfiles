@@ -132,3 +132,6 @@ zplug "RiverGlide/zsh-goenv", from:gitlab
 export ZSH_CONFIG_PATH="$HOME/.config/zsh"
 source $ZSH_CONFIG_PATH/functions.zsh
 source $ZSH_CONFIG_PATH/aliases.zsh
+
+
+export PATH=$HOME/.nimble/bin:$PATH
