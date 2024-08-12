@@ -1,6 +1,7 @@
 
 # general
 alias e=$EDITOR
+alias c=clear
 
 # eza
 alias l="eza -la"
