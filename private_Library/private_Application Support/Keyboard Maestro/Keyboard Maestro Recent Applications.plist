@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary</string>
+		<key>Name</key>
+		<string>Google Chrome Canary</string>
+		<key>NewFile</key>
+		<string>/Applications/Google Chrome Canary.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Music</string>
+		<key>Name</key>
+		<string>Music</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Music.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.pqrs.Karabiner-EventViewer</string>
+		<key>Name</key>
+		<string>Karabiner-EventViewer</string>
+		<key>NewFile</key>
+		<string>/Applications/Karabiner-EventViewer.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.systempreferences</string>
+		<key>Name</key>
+		<string>System Settings</string>
+		<key>NewFile</key>
+		<string>/System/Applications/System Settings.app</string>
+	</dict>
+</array>
+</plist>
