@@ -16,6 +16,7 @@ tap "timsutton/formulae"
 tap "waydabber/betterdisplay"
 tap "yqrashawn/goku"
 
+brew "mas"
 brew "zsh"
 brew "asdf"
 brew "awscli"
