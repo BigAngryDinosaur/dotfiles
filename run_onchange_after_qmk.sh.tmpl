@@ -1,0 +1,4 @@
+{{ if (or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux")) -}}
+#!/bin/sh
+qmk setup BigAngryDinosaur/qmk_firmware
+{{ end -}}
