@@ -39,7 +39,7 @@
                 "data": {
                   "command": "open -a Spotify"
                 },
-                "name": "Music",
+                "name": "Spotify",
                 "icon": "itunes",
                 "iconTheme": "simple-icons"
               },
@@ -264,7 +264,7 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "osascript -e 'tell application \"Music\" to next track'"
+                  "command": "osascript -e 'tell application \"Spotify\" to next track'"
                 },
                 "name": "Next Track",
                 "icon": "skip_next",
@@ -273,7 +273,7 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "osascript -e 'tell application \"Music\" to playpause'"
+                  "command": "osascript -e 'tell application \"Spotify\" to playpause'"
                 },
                 "name": "Play / Pause",
                 "icon": "play_pause",
@@ -282,7 +282,7 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "osascript -e 'tell application \"Music\" to previous track'"
+                  "command": "osascript -e 'tell application \"Spotify\" to previous track'"
                 },
                 "name": "Previous Track",
                 "icon": "skip_previous",
@@ -405,7 +405,7 @@
                 "data": {
                   "command": "osascript -e 'tell application \"Finder\" to open (path to music folder as text)'"
                 },
-                "name": "Music",
+                "name": "Spotify",
                 "icon": "music_note",
                 "iconTheme": "material-symbols-rounded"
               }
