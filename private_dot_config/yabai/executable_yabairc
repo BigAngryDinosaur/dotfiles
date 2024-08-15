@@ -62,5 +62,4 @@ yabai -m config window_gap                   10
 
 
 # Signals
-yabai -m signal --add event=space_changed action='yabai -m window --focus $(yabai -m query --windows --space | jq -r '\''[.[]|select(."is-visible")][-1].id'\'')'
-
+#yabai -m signal --add event=space_changed action='yabai -m window --focus $(yabai -m query --windows --space | jq -r '\''[.[]|select(."is-visible")][-1].id'\'')'
