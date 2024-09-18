@@ -17,7 +17,6 @@ tap "oven-sh/bun"
 
 brew "mas"
 brew "zsh"
-brew "asdf"
 brew "bat"
 brew "chezmoi"
 brew "elixir"

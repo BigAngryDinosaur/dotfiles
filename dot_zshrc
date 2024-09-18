@@ -108,11 +108,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-  
+### ASDF
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+#-------------
+
 export PATH=/Users/rusha.sawant/.local/bin:$PATH
 
 export EDITOR='nvim'
@@ -133,5 +138,5 @@ export ZSH_CONFIG_PATH="$HOME/.config/zsh"
 source $ZSH_CONFIG_PATH/functions.zsh
 source $ZSH_CONFIG_PATH/aliases.zsh
 
-
 export PATH=$HOME/.nimble/bin:$PATH
+
