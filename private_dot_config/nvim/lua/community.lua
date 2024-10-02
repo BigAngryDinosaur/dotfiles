@@ -7,5 +7,8 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.swift" },
+  { import = "astrocommunity.pack.haskell" },
+  { import = "astrocommunity.pack.typescript" },
   -- import/override with your plugins folder
 }

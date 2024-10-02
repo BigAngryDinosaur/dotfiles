@@ -4,11 +4,35 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary</string>
+		<string>com.apple.systempreferences</string>
 		<key>Name</key>
-		<string>Google Chrome Canary</string>
+		<string>System Settings</string>
 		<key>NewFile</key>
-		<string>/Applications/Google Chrome Canary.app</string>
+		<string>/System/Applications/System Settings.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.dt.Xcode</string>
+		<key>Name</key>
+		<string>Xcode</string>
+		<key>NewFile</key>
+		<string>/Applications/Xcode.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.torusknot.SourceTreeNotMAS</string>
+		<key>Name</key>
+		<string>Sourcetree</string>
+		<key>NewFile</key>
+		<string>/Applications/Sourcetree.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.xk72.Charles</string>
+		<key>Name</key>
+		<string>Charles</string>
+		<key>NewFile</key>
+		<string>/Applications/Charles.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -25,14 +49,6 @@
 		<string>Karabiner-EventViewer</string>
 		<key>NewFile</key>
 		<string>/Applications/Karabiner-EventViewer.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.systempreferences</string>
-		<key>Name</key>
-		<string>System Settings</string>
-		<key>NewFile</key>
-		<string>/System/Applications/System Settings.app</string>
 	</dict>
 </array>
 </plist>

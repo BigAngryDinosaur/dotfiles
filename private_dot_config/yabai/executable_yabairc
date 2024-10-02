@@ -30,6 +30,8 @@ yabai -m rule --add app="^Xcode$" space=1
 yabai -m rule --add app="^Simulator$" space=1
 yabai -m rule --add app='^Spotify$' manage=off sticky=on layer=above space=7
 yabai -m rule --add app='^Slack$' manage=off sticky=on layer=above space=8
+yabai -m rule --add app='^Karabiner-Elements$' manage=off
+yabai -m rule --add app='^Karabiner-EventViewer$' manage=off
 
 yabai -m rule --apply
 
