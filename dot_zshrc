@@ -110,33 +110,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-### ASDF
-. "$HOME/.asdf/asdf.sh"
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
-#-------------
-
-export PATH=/Users/rusha.sawant/.local/bin:$PATH
-
-export EDITOR='nvim'
-
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-
-# zplug
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-zplug "RiverGlide/zsh-goenv", from:gitlab
-
-[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
-
 ## ZSH Local files
 export ZSH_CONFIG_PATH="$HOME/.config/zsh"
+source $ZSH_CONFIG_PATH/path.zsh
+source $ZSH_CONFIG_PATH/editor.zsh
+source $ZSH_CONFIG_PATH/zplug.zsh
 source $ZSH_CONFIG_PATH/functions.zsh
 source $ZSH_CONFIG_PATH/aliases.zsh
+source $ZSH_CONFIG_PATH/tools/asdf.zsh
+source $ZSH_CONFIG_PATH/tools/fzf.zsh
+source $ZSH_CONFIG_PATH/tools/zoxide.zsh
+source $ZSH_CONFIG_PATH/tools/goenv.zsh
+source $ZSH_CONFIG_PATH/tools/ghcup.zsh
+source $ZSH_CONFIG_PATH/tools/nimble.zsh
 
-export PATH=$HOME/.nimble/bin:$PATH
 
