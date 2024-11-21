@@ -4,5 +4,6 @@ private_dot_config/private_karabiner/private_automatic_backups/
 .oh-my-zsh
 
 .config/karabiner/automatic_backups
+.config/nvim/lazy-lock.json
 
 
