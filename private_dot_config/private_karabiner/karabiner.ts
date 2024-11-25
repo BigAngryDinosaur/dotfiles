@@ -1,6 +1,8 @@
 import {
   map,
   mapPointingButton,
+  mapSimultaneous,
+  withModifier,
   rule,
   toPointingButton,
   writeToProfile,
@@ -9,7 +11,14 @@ import {
   duoLayer,
   withMapper,
   toPaste,
+  ifApp,
+  toKey,
 } from "karabiner.ts";
+
+import {
+  tapModifiers,
+  duoModifiers,
+} from "./utils.ts"
 
 const args = Bun.argv;
 const isDryRun = args[2] === "--dry-run";
@@ -31,6 +40,8 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
 
   layer_launchApp(),
   layer_emojiAndSnippet(),
+
+  app_xcode(),
 
 ]);
 
@@ -95,5 +106,21 @@ function layer_emojiAndSnippet() {
     withMapper(['←', '→', '↑', '↓', '␣', '⏎', '⌫', '⌦'])((k) =>
       map(k).toPaste(k),
     ),
+  ])
+}
+
+function app_xcode() {
+  return rule('XCode', ifApp('^com.apple.dt.Xcode$')).manipulators([
+    withModifier('right_shift')({
+      'a': toKey('←', '⌘⌃'), // Back
+      'd': toKey('→', '⌘⌃'), // Forward
+
+      's': toKey('o', '⌘⇧'), // Fuzzy Open
+
+      'j': toKey('j', '⌘⌃'), // Go to definition
+
+      'r': toKey('r', '⌘'), // Run
+      'b': toKey('b', '⌘'), // Build
+    })
   ])
 }
