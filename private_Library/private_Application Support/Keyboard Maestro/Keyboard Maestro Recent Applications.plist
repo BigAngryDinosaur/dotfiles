@@ -4,6 +4,38 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>com.apple.systempreferences</string>
+		<key>Name</key>
+		<string>System Settings</string>
+		<key>NewFile</key>
+		<string>/System/Applications/System Settings.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.runningwithcrayons.Alfred-Preferences</string>
+		<key>Name</key>
+		<string>Alfred Preferences</string>
+		<key>NewFile</key>
+		<string>/Applications/Alfred 5.app/Contents/Preferences/Alfred Preferences.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.ActivityMonitor</string>
+		<key>Name</key>
+		<string>Activity Monitor</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Activity Monitor.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.AccessibilityInspector</string>
+		<key>Name</key>
+		<string>Accessibility Inspector</string>
+		<key>NewFile</key>
+		<string>/Applications/Xcode.app/Contents/Applications/Accessibility Inspector.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.apple.finder</string>
 		<key>Name</key>
 		<string>Finder</string>
@@ -60,22 +92,6 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.AccessibilityInspector</string>
-		<key>Name</key>
-		<string>Accessibility Inspector</string>
-		<key>NewFile</key>
-		<string>/Applications/Xcode.app/Contents/Applications/Accessibility Inspector.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.ActivityMonitor</string>
-		<key>Name</key>
-		<string>Activity Monitor</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Utilities/Activity Monitor.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.stairways.keyboardmaestro.editor</string>
 		<key>Name</key>
 		<string>Keyboard Maestro</string>
@@ -89,14 +105,6 @@
 		<string>Simulator</string>
 		<key>NewFile</key>
 		<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.systempreferences</string>
-		<key>Name</key>
-		<string>System Settings</string>
-		<key>NewFile</key>
-		<string>/System/Applications/System Settings.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
