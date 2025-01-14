@@ -42,6 +42,7 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
   layer_emojiAndSnippet(),
 
   app_xcode(),
+  app_vscode(),
 
 ]);
 
@@ -121,6 +122,31 @@ function app_xcode() {
 
       'r': toKey('r', '⌘'), // Run
       'b': toKey('b', '⌘'), // Build
+
+      'z': toKey('backslash', '⌘'),
+
+      'w': km('Xcode action group')
     })
   ])
+}
+
+function app_vscode() {
+  return rule('VSCode', ifApp('^com.microsoft.VSCode$')).manipulators([
+    withModifier('right_shift')({
+      'a': toKey('-', '⌃'), // Back
+      'd': toKey('-', '⌃⇧'), // Forward
+
+      's': toKey('p', '⌘'), // Fuzzy Open
+
+      'j': km('VSCode: Go To Definition'), // Go to definition
+
+      'r': toKey('f5'), // Run
+    })
+  ])
+}
+
+function km(macroName: string) {
+  return to$(
+    `osascript -e 'tell application "Keyboard Maestro Engine" to do script "${macroName}"'`
+  )
 }

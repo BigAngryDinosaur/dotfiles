@@ -66,8 +66,8 @@ hyper - f : yabai -m window --toggle zoom-fullscreen
 # Stack
 hyper - z : yabai -m window --stack prev
 hyper - x : yabai -m window --stack next
-hyper - q : yabai -m window --focus stack.prev
-hyper - e : yabai -m window --focus stack.next
+hyper - q : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+hyper - e : yabai -m window --focus stack.next || yabai -m window --focus stack.first
 hyper - c : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
 
 # Send window
