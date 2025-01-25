@@ -94,6 +94,7 @@ cask "qmk-toolbox"
 cask "sequel-ace"
 cask "kando"
 cask "hiddenbar"
+cask "raycast"
 
 vscode "alefragnani.project-manager"
 vscode "bierner.github-markdown-preview"

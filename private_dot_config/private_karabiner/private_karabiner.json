@@ -48,7 +48,10 @@
                     ],
                     "halt": true
                   }
-                ]
+                ],
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 200
+                }
               }
             ]
           },
@@ -101,7 +104,7 @@
                   {
                     "set_notification_message": {
                       "id": "duo-layer-duo-layer-l-;",
-                      "text": "Launch App 🚀 📱"
+                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
                     }
                   }
                 ],
@@ -152,7 +155,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "d"
+                  "key_code": "x"
                 },
                 "to": [
                   {
@@ -170,7 +173,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "f"
+                  "key_code": "v"
                 },
                 "to": [
                   {
@@ -188,7 +191,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "q"
+                  "key_code": "c"
                 },
                 "to": [
                   {
@@ -206,7 +209,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "w"
+                  "key_code": "f"
                 },
                 "to": [
                   {
@@ -1262,6 +1265,34 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "j",
                   "modifiers": {
                     "mandatory": [
@@ -1303,6 +1334,169 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
                       "^com.microsoft.VSCode$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Zed",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "control",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Zed: Go To Definition\"'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f5"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^dev.zed.Zed$"
                     ]
                   }
                 ]

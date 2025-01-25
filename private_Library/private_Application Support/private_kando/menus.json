@@ -7,9 +7,48 @@
       "root": {
         "type": "submenu",
         "name": "Menu",
-        "icon": "award_star",
+        "icon": "fiber_manual_record",
         "iconTheme": "material-symbols-rounded",
         "children": [
+          {
+            "type": "submenu",
+            "name": "Audio",
+            "icon": "play_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "osascript -e 'tell application \"Spotify\" to playpause'"
+                },
+                "name": "Play / Pause",
+                "icon": "play.png",
+                "iconTheme": "my colors",
+                "angle": 0
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "osascript -e 'tell application \"Spotify\" to next track'"
+                },
+                "name": "Next Track",
+                "icon": "next.png",
+                "iconTheme": "my colors",
+                "angle": 90
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "osascript -e 'tell application \"Spotify\" to previous track'"
+                },
+                "name": "Previous Track",
+                "icon": "previous.png",
+                "iconTheme": "my colors",
+                "angle": 270
+              }
+            ],
+            "angle": 0
+          },
           {
             "type": "submenu",
             "name": "Apps",
@@ -22,8 +61,8 @@
                   "command": "open https://www.google.com"
                 },
                 "name": "Chrome",
-                "icon": "safari",
-                "iconTheme": "simple-icons"
+                "icon": "chrome.svg",
+                "iconTheme": "my colors"
               },
               {
                 "type": "command",
@@ -40,8 +79,8 @@
                   "command": "open -a Spotify"
                 },
                 "name": "Spotify",
-                "icon": "itunes",
-                "iconTheme": "simple-icons"
+                "icon": "spotify.svg",
+                "iconTheme": "my colors"
               },
               {
                 "type": "command",
@@ -49,26 +88,54 @@
                   "command": "open -a Finder"
                 },
                 "name": "Finder",
-                "icon": "folder_shared",
-                "iconTheme": "material-symbols-rounded"
+                "icon": "finder.png",
+                "iconTheme": "my colors"
               },
               {
                 "type": "command",
                 "data": {
-                  "command": "open -a iTerm2"
+                  "command": "open -a \"System Settings\""
                 },
-                "name": "Terminal",
-                "icon": "terminal",
-                "iconTheme": "material-symbols-rounded"
+                "name": "Settings",
+                "icon": "settings.svg",
+                "iconTheme": "my colors"
               }
             ]
           },
           {
             "type": "submenu",
-            "name": "Web Links",
+            "name": "Web",
             "icon": "public",
             "iconTheme": "material-symbols-rounded",
             "children": [
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://outlook.live.com/mail/0/"
+                },
+                "name": "Outlook",
+                "icon": "public",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://news.ycombinator.com/"
+                },
+                "name": "HackerNews",
+                "icon": "public",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://old.reddit.com/"
+                },
+                "name": "Reddit",
+                "icon": "public",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
               {
                 "type": "uri",
                 "data": {
@@ -81,58 +148,32 @@
               {
                 "type": "uri",
                 "data": {
-                  "uri": "https://github.com/kando-menu/kando"
-                },
-                "name": "Kando on GitHub",
-                "icon": "github",
-                "iconTheme": "simple-icons"
-              },
-              {
-                "type": "uri",
-                "data": {
-                  "uri": "https://ko-fi.com/schneegans"
-                },
-                "name": "Kando on Ko-fi",
-                "icon": "kofi",
-                "iconTheme": "simple-icons"
-              },
-              {
-                "type": "uri",
-                "data": {
                   "uri": "https://www.youtube.com"
                 },
                 "name": "YouTube",
                 "icon": "youtube",
-                "iconTheme": "simple-icons"
+                "iconTheme": "simple-icons",
+                "angle": 270
               },
               {
                 "type": "uri",
                 "data": {
-                  "uri": "https://chat.openai.com/chat"
+                  "uri": "https://mail.google.com/"
                 },
-                "name": "ChatGPT",
-                "icon": "openai",
-                "iconTheme": "simple-icons"
+                "name": "Gmail",
+                "icon": "public",
+                "iconTheme": "material-symbols-rounded"
               }
-            ]
+            ],
+            "angle": 90
           },
           {
             "type": "submenu",
             "data": {},
             "name": "Workspaces",
-            "icon": "apps",
+            "icon": "select_window",
             "iconTheme": "material-symbols-rounded",
             "children": [
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit4",
-                  "delayed": true
-                },
-                "name": "4",
-                "icon": "keyboard_external_input",
-                "iconTheme": "material-symbols-rounded"
-              },
               {
                 "type": "hotkey",
                 "data": {
@@ -146,50 +187,20 @@
               {
                 "type": "hotkey",
                 "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit6",
+                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit4",
                   "delayed": true
                 },
-                "name": "6",
+                "name": "4",
                 "icon": "keyboard_external_input",
                 "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "hotkey",
                 "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit7",
+                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit3",
                   "delayed": true
                 },
-                "name": "7",
-                "icon": "keyboard_external_input",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit8",
-                  "delayed": true
-                },
-                "name": "8",
-                "icon": "keyboard_external_input",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit9",
-                  "delayed": true
-                },
-                "name": "9",
-                "icon": "keyboard_external_input",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit1",
-                  "delayed": true
-                },
-                "name": "1",
+                "name": "3",
                 "icon": "keyboard_external_input",
                 "iconTheme": "material-symbols-rounded"
               },
@@ -206,15 +217,16 @@
               {
                 "type": "hotkey",
                 "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit3",
+                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit1",
                   "delayed": true
                 },
-                "name": "3",
-                "icon": "keyboard_external_input",
-                "iconTheme": "material-symbols-rounded"
+                "name": "1",
+                "icon": "1.png",
+                "iconTheme": "my colors",
+                "angle": 270
               }
             ],
-            "angle": 90
+            "angle": 180
           },
           {
             "type": "submenu",
@@ -252,91 +264,6 @@
                 "name": "Cut",
                 "icon": "cut",
                 "iconTheme": "material-symbols-rounded"
-              }
-            ]
-          },
-          {
-            "type": "submenu",
-            "name": "Audio",
-            "icon": "play_circle",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "osascript -e 'tell application \"Spotify\" to next track'"
-                },
-                "name": "Next Track",
-                "icon": "skip_next",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "osascript -e 'tell application \"Spotify\" to playpause'"
-                },
-                "name": "Play / Pause",
-                "icon": "play_pause",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "osascript -e 'tell application \"Spotify\" to previous track'"
-                },
-                "name": "Previous Track",
-                "icon": "skip_previous",
-                "iconTheme": "material-symbols-rounded"
-              }
-            ]
-          },
-          {
-            "type": "submenu",
-            "name": "Windows",
-            "icon": "select_window",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "osascript -e 'tell application \"System Events\" to key code 126 using control down'"
-                },
-                "name": "Mission Control",
-                "icon": "select_window",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 0
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ArrowRight",
-                  "delayed": true
-                },
-                "name": "Tile Right",
-                "icon": "text_select_jump_to_end",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 90
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "MetaLeft+KeyW",
-                  "delayed": true
-                },
-                "name": "Close Window",
-                "icon": "cancel_presentation",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit1",
-                  "delayed": true
-                },
-                "name": "1",
-                "icon": "text_select_jump_to_beginning",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 270
               }
             ]
           },
@@ -410,40 +337,91 @@
                 "iconTheme": "material-symbols-rounded"
               }
             ]
-          },
-          {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "",
-              "delayed": true
-            },
-            "name": "Simulate Hotkey",
-            "icon": "keyboard_external_input",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "",
-              "delayed": true
-            },
-            "name": "Simulate Hotkey",
-            "icon": "keyboard_external_input",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "",
-              "delayed": true
-            },
-            "name": "Simulate Hotkey",
-            "icon": "keyboard_external_input",
-            "iconTheme": "material-symbols-rounded"
           }
         ]
       }
     }
   ],
-  "templates": []
+  "templates": [
+    {
+      "type": "submenu",
+      "name": "Windows",
+      "icon": "select_window",
+      "iconTheme": "material-symbols-rounded",
+      "children": [
+        {
+          "type": "command",
+          "data": {
+            "command": "osascript -e 'tell application \"System Events\" to key code 126 using control down'"
+          },
+          "name": "Mission Control",
+          "icon": "select_window",
+          "iconTheme": "material-symbols-rounded",
+          "angle": 0
+        },
+        {
+          "type": "hotkey",
+          "data": {
+            "hotkey": "ControlLeft+AltLeft+ArrowRight",
+            "delayed": true
+          },
+          "name": "Tile Right",
+          "icon": "text_select_jump_to_end",
+          "iconTheme": "material-symbols-rounded",
+          "angle": 90
+        },
+        {
+          "type": "hotkey",
+          "data": {
+            "hotkey": "MetaLeft+KeyW",
+            "delayed": true
+          },
+          "name": "Close Window",
+          "icon": "cancel_presentation",
+          "iconTheme": "material-symbols-rounded"
+        },
+        {
+          "type": "hotkey",
+          "data": {
+            "hotkey": "ControlLeft+AltLeft+ShiftLeft+MetaLeft+Digit1",
+            "delayed": true
+          },
+          "name": "1",
+          "icon": "text_select_jump_to_beginning",
+          "iconTheme": "material-symbols-rounded",
+          "angle": 270
+        }
+      ]
+    },
+    {
+      "type": "hotkey",
+      "data": {
+        "hotkey": "",
+        "delayed": true
+      },
+      "name": "Simulate Hotkey",
+      "icon": "keyboard_external_input",
+      "iconTheme": "material-symbols-rounded"
+    },
+    {
+      "type": "hotkey",
+      "data": {
+        "hotkey": "",
+        "delayed": true
+      },
+      "name": "Simulate Hotkey",
+      "icon": "keyboard_external_input",
+      "iconTheme": "material-symbols-rounded"
+    },
+    {
+      "type": "hotkey",
+      "data": {
+        "hotkey": "",
+        "delayed": true
+      },
+      "name": "Simulate Hotkey",
+      "icon": "keyboard_external_input",
+      "iconTheme": "material-symbols-rounded"
+    }
+  ]
 }

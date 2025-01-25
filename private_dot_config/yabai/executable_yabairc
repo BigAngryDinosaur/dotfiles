@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
@@ -13,25 +15,17 @@ yabai -m space 7 --label 7
 yabai -m space 8 --label 8
 
 # rules for apps
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^App Store$" manage=off
-yabai -m rule --add app="^Activity Monitor$" manage=off
-yabai -m rule --add app="^Notes$" manage=off sticky=on
-yabai -m rule --add app='^Finder$' manage=off
-yabai -m rule --add app='^Disk Utility$' manage=off
-yabai -m rule --add app='^iTerm2$' manage=off layer=above
-yabai -m rule --add app='^FaceTime$' manage=off layer=above
-yabai -m rule --add app='^Steam$' manage=off
-yabai -m rule --add app='^iMessages$' manage=off
-yabai -m rule --add app='^VLC$' manage=off
-yabai -m rule --add app='^Archive Utility$' manage=off
-yabai -m rule --add app="^Simulator$" manage=on
 yabai -m rule --add app="^Xcode$" space=1
 yabai -m rule --add app="^Simulator$" space=1
-yabai -m rule --add app='^Spotify$' manage=off sticky=on layer=above space=7
-yabai -m rule --add app='^Slack$' manage=off sticky=on layer=above space=8
-yabai -m rule --add app='^Karabiner-Elements$' manage=off
-yabai -m rule --add app='^Karabiner-EventViewer$' manage=off
+yabai -m rule --add app="^CleanShot X$" sticky=on manage=off opacity=1.0
+yabai -m rule --add app="^Kando$" manage=off opacity=1.0
+
+yabai -m rule --add app="^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password)$" manage=off opacity=1.0
+yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password)$' action='window="$(yabai -m query --windows --window)"; display="$(/opt/homebrew/bin/yabai -m query --displays --window)"; coords="$(/opt/homebrew/bin/jq --argjson window "$window" --argjson display "$display" -nr "((\$display.frame | .x + .w / 2) - (\$window.frame.w / 2) | tostring) + \":\" + ((\$display.frame | .y + .h / 2) - (\$window.frame.h / 2) | tostring)")"; /opt/homebrew/bin/yabai -m window --move "abs:$coords"'
+
+yabai -m rule --add app="^Spotify$" scratchpad="Spotify" grid="22:22:1:1:20:20"
+yabai -m rule --add app='^Slack$' scratchpad="Slack" grid="22:22:1:1:20:20"
+yabai -m rule --add app="^System Settings$" scratchpad="System Settings" grid="22:22:1:1:20:20"
 
 yabai -m rule --apply
 

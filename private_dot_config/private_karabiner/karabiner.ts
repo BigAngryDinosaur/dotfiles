@@ -34,7 +34,10 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
       .toIfHeldDown({
         key_code: "spacebar",
         modifiers: ["left_shift", "left_command", "left_option", "left_control"],
-        halt: true
+        halt: true,
+      })
+      .parameters({
+        "basic.to_if_held_down_threshold_milliseconds": 200,
       }),
   ]),
 
@@ -43,26 +46,28 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
 
   app_xcode(),
   app_vscode(),
+  app_zed(),
 
 ]);
 
 function layer_launchApp() {
-  let layer = duoLayer('l', ';').notification('Launch App 🚀 📱')
-  return layer.manipulators({
-    a: toApp('Slack'),
-    s: toApp('Spotify'),
-    d: toApp('Xcode'),
-    f: toApp('Visual Studio Code'),
-    q: toApp('Google Chrome'),
-    w: toApp('Firefox Developer Edition'),
-    t: toApp('Sourcetree'),
-    z: toApp('System Settings'),
-    // r: to$(`open ~/Applications/Rider.app`),
-    // v: toApp('Visual Studio Code'),
-    // y: to$(String.raw`open ~/Applications/PyCharm\ Professional\ Edition.app`),
-    // z: toApp('zoom.us'),
-    // ',': toApp('System Settings'),
-  })
+  let apps = [
+    { name: "Slack", shortcut: "a" },
+    { name: "Spotify", shortcut: "s" },
+    { name: "Xcode", shortcut: "x" },
+    { name: "Visual Studio Code", shortcut: "v" },
+    { name: "Google Chrome", shortcut: "c" },
+    { name: "Firefox Developer Edition", shortcut: "f" },
+    { name: "Sourcetree", shortcut: "t" },
+    { name: "System Settings", shortcut: "z" },
+  ];
+  let hint = apps.map(app => `${app.shortcut.toUpperCase()} | ${app.name}`).join('\n');
+  let layer = duoLayer('l', ';').notification(hint)
+  let res = apps.reduce((keymap, app) => {
+    keymap[app.shortcut] = toApp(app.name);
+    return keymap;
+  }, {});
+  return layer.manipulators(res);
 }
 
 function layer_emojiAndSnippet() {
@@ -81,7 +86,7 @@ function layer_emojiAndSnippet() {
     s: '😅', // _sweat_smile
     t: '🧵', // _thread
     u: '💄', // UI/Style
-    v: '🔖', // release / Version tags
+    v: '🔖', // release / Version ta
     o: '💭', // Opinions and thoughts
     i: '👨‍💻', // Experiences and stories
   }
@@ -137,6 +142,7 @@ function app_vscode() {
       'd': toKey('-', '⌃⇧'), // Forward
 
       's': toKey('p', '⌘'), // Fuzzy Open
+      'f': toKey('p', '⌘⇧'), // Fuzzy Command
 
       'j': km('VSCode: Go To Definition'), // Go to definition
 
@@ -144,6 +150,23 @@ function app_vscode() {
     })
   ])
 }
+
+function app_zed() {
+  return rule('Zed', ifApp('^dev.zed.Zed$')).manipulators([
+    withModifier('right_shift')({
+      'a': toKey('-', '⌃'), // Back
+      'd': toKey('-', '⌃⇧'), // Forward
+
+      's': toKey('p', '⌘'), // Fuzzy Open
+      'f': toKey('p', '⌘⇧'), // Fuzzy Command
+
+      'j': km('Zed: Go To Definition'), // Go to definition
+
+      'r': toKey('f5'), // Run
+    })
+  ])
+}
+
 
 function km(macroName: string) {
   return to$(

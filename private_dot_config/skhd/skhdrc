@@ -86,6 +86,7 @@ rcmd - w: yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:
 
 # float / unfloat window and center on screen
 rcmd - t : yabai -m window --toggle float
+rcmd - e : yabai -m window --toggle sticky --toggle pip
 
 # float / unfloat window and center on screen
 rcmd - r : yabai -m window --toggle float;\
