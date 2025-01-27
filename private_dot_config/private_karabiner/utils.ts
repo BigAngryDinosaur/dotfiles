@@ -68,3 +68,14 @@ export function duoModifiers(
   return result
 }
 
+// Execute Keyboard Maestro macros.
+export function km(macroName: string) {
+  return to$(
+    `osascript -e 'tell application "Keyboard Maestro Engine" to do script "${macroName}"'`
+  )
+}
+
+// Execute Raycast Deep Links.
+export function raycast(name: string, focused = false) {
+  return to$(`open ${focused ? '-g ' : ''}raycast://extensions/${name}`)
+}
