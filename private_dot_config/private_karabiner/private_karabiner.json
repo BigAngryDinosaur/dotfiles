@@ -39,12 +39,12 @@
                 ],
                 "to_if_held_down": [
                   {
-                    "key_code": "spacebar",
+                    "key_code": "home",
                     "modifiers": [
-                      "left_shift",
-                      "left_command",
-                      "left_option",
-                      "left_control"
+                      "right_shift",
+                      "right_command",
+                      "right_option",
+                      "right_control"
                     ],
                     "halt": true
                   }
@@ -311,7 +311,7 @@
                   {
                     "set_notification_message": {
                       "id": "duo-layer-duo-layer-z-x",
-                      "text": "🐛 📅 📝 🚩 💯 😂 🔀 ✨ 👍 ♻️ 😅 🧵 💄 🔖 💭\nB    C    D    F    H    J    M    N    P    R    S    T    U    V    O"
+                      "text": "b = '😂'\nc = '❤️'\nd = '🔥'\nf = '😊'\nh = '👍'\nj = '💔'\nm = '🎉'\nn = '🥰'\np = '👏'\nr = '✨'\ns = '🙏'\nt = '💯'\nu = '🤔'\nv = '😎'\no = '🙌'"
                     }
                   }
                 ],
@@ -330,7 +330,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🐛\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😂\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -348,7 +348,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"📅\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"❤️\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -366,7 +366,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"📝\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🔥\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -384,7 +384,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🚩\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😊\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -402,7 +402,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💯\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👍\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -420,7 +420,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😂\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💔\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -438,7 +438,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🔀\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🎉\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -456,7 +456,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"✨\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🥰\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -474,7 +474,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👍\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👏\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -492,7 +492,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"♻️\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"✨\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -510,7 +510,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😅\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🙏\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -528,7 +528,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🧵\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💯\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -546,7 +546,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💄\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🤔\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -564,7 +564,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🔖\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😎\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -582,7 +582,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💭\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🙌\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [
@@ -600,7 +600,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👨‍💻\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
+                    "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🤩\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'"
                   }
                 ],
                 "conditions": [

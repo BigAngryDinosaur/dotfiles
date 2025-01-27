@@ -32,8 +32,8 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
     mapPointingButton("button4")
       .toIfAlone(toPointingButton("button4"))
       .toIfHeldDown({
-        key_code: "spacebar",
-        modifiers: ["left_shift", "left_command", "left_option", "left_control"],
+        key_code: "home",
+        modifiers: ["right_shift", "right_command", "right_option", "right_control"],
         halt: true,
       })
       .parameters({
@@ -63,7 +63,7 @@ function layer_launchApp() {
   ];
   let hint = apps.map(app => `${app.shortcut.toUpperCase()} | ${app.name}`).join('\n');
   let layer = duoLayer('l', ';').notification(hint)
-  let res = apps.reduce((keymap, app) => {
+  let res = apps.reduce((keymap: { [key: string]: any }, app) => {
     keymap[app.shortcut] = toApp(app.name);
     return keymap;
   }, {});
@@ -73,31 +73,27 @@ function layer_launchApp() {
 function layer_emojiAndSnippet() {
   // See https://gitmoji.dev/
   let emojiMap = {
-    b: '🐛', // Fix a bug
-    c: '📅', // _calendar
-    d: '📝', // add or update Documentation
-    f: '🚩', // add, update, or remove Feature Flags
-    h: '💯', // _hundred
-    j: '😂', // _joy
-    m: '🔀', // Merge branches
-    n: '✨', // introduce New features
-    p: '👍', // _plus_one +1
-    r: '♻️', // Refactor code
-    s: '😅', // _sweat_smile
-    t: '🧵', // _thread
-    u: '💄', // UI/Style
-    v: '🔖', // release / Version ta
-    o: '💭', // Opinions and thoughts
-    i: '👨‍💻', // Experiences and stories
-  }
+    b: '😂', // Face with tears of joy
+    c: '❤️', // Red heart
+    d: '🔥', // Fire
+    f: '😊', // Smiling face with smiling eyes
+    h: '👍', // Thumbs up
+    j: '💔', // Broken heart
+    m: '🎉', // Party popper
+    n: '🥰', // Smiling face with hearts
+    p: '👏', // Clapping hands
+    r: '✨', // Sparkles
+    s: '🙏', // Folded hands
+    t: '💯', // Hundred points
+    u: '🤔', // Thinking face
+    v: '😎', // Smiling face with sunglasses
+    o: '🙌', // Raising hands
+    i: '🤩', // Star-struck
+  };
 
   let emojiHint = Object.entries(emojiMap)
     .slice(0, 15)
-    .reduce(
-      (r, [k, v]) => [r[0].concat(v), r[1].concat(k.toUpperCase())],
-      [[] as string[], [] as string[]],
-    )
-    .map((v, i) => v.join(i === 0 ? ' ' : '    '))
+    .map(([k, v]) => `${k} = '${v}'`)
     .join('\n')
 
   let layer = duoLayer('z', 'x').notification(emojiHint)
