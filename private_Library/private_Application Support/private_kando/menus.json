@@ -1,7 +1,7 @@
 {
   "menus": [
     {
-      "shortcut": "Control+Alt+Shift+Meta+Space",
+      "shortcut": "Control+Alt+Shift+Meta+Home",
       "shortcutID": "example-menu",
       "centered": false,
       "root": {
