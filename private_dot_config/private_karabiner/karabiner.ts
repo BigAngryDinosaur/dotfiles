@@ -11,13 +11,14 @@ import app_xcode from "./rules/xcode.ts";
 import app_vscode from "./rules/vscode.ts";
 import app_zed from "./rules/zed.ts";
 import superwhisper from "./rules/superwhisper.ts";
+import { generalMappings } from "./rules/general.ts";
 
 const args = Bun.argv;
 const isDryRun = args[2] === "--dry-run";
 
 writeToProfile(isDryRun ? "--dry-run" : "Default", [
   // Hyper Key (Caps Lock)
-  rule("Caps Lock -> Hyper").manipulators([map("caps_lock").toHyper()]),
+  // rule("Caps Lock -> Hyper").manipulators([map("caps_lock").toHyper()]),
 
   // Kando
   rule("Kando").manipulators([
@@ -33,6 +34,8 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
       }),
   ]),
 
+  ...generalMappings(),
+
   layer_launchApp(),
   layer_emojiAndSnippet(),
 
@@ -40,7 +43,7 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
   app_vscode(),
   app_zed(),
 
-  superwhisper()
+  ...superwhisper()
 ]);
 
 

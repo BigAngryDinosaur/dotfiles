@@ -18,16 +18,16 @@ hyper - k : yabai -m window --focus north
 hyper - l : yabai -m window --focus east
 
 # swap window
-hyper - a : yabai -m window --swap west
-hyper - s : yabai -m window --swap south
-hyper - w : yabai -m window --swap north
-hyper - d : yabai -m window --swap east
+meh - a : yabai -m window --swap west
+meh - s : yabai -m window --swap south
+meh - w : yabai -m window --swap north
+meh - d : yabai -m window --swap east
 
 # move window
-meh - h : yabai -m window --warp west
-meh - j : yabai -m window --warp south
-meh - k : yabai -m window --warp north
-meh - l : yabai -m window --warp east
+hyper - a : yabai -m window --warp west
+hyper - s : yabai -m window --warp south
+hyper - w : yabai -m window --warp north
+hyper - d : yabai -m window --warp east
 
 ## balance size of windows
 hyper - 0 : yabai -m space --balance
@@ -43,9 +43,19 @@ alt - y : yabai -m space --mirror y-axis
 alt - x : yabai -m space --mirror x-axis
 
 #Move active window to next space on current display
-shift + lalt + lcmd + ctrl + ralt - 1 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '1' ]]; then yabai -m window --space 2; elif [[ '{}' = '2' ]]; then yabai -m window --space 1; fi"
-shift + lalt + lcmd + ctrl + ralt - 2 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '3' ]]; then yabai -m window --space 4; elif [[ '{}' = '4' ]]; then yabai -m window --space 3; fi"
-shift + lalt + lcmd + ctrl + ralt - 3 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '5' ]]; then yabai -m window --space 6; elif [[ '{}' = '6' ]]; then yabai -m window --space 5; fi"
+# shift + lalt + lcmd + ctrl + ralt - 1 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '1' ]]; then yabai -m window --space 2; elif [[ '{}' = '2' ]]; then yabai -m window --space 1; fi"
+# shift + lalt + lcmd + ctrl + ralt - 2 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '3' ]]; then yabai -m window --space 4; elif [[ '{}' = '4' ]]; then yabai -m window --space 3; fi"
+# shift + lalt + lcmd + ctrl + ralt - 3 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '5' ]]; then yabai -m window --space 6; elif [[ '{}' = '6' ]]; then yabai -m window --space 5; fi"
+
+# focus monitor
+meh - j  : yabai -m display --focus 2
+meh - k  : yabai -m display --focus 1
+meh - l  : yabai -m display --focus 3
+
+# send window to monitor and follow focus
+meh - u  : yabai -m window --display 2; yabai -m display --focus 2
+meh - i  : yabai -m window --display 1; yabai -m display --focus 1
+meh - o  : yabai -m window --display 3; yabai -m display --focus 3
 
 # show next space per display
 hyper - 1 : yabai -m space --focus 1 || yabai -m space --focus 4
@@ -86,7 +96,6 @@ rcmd - w: yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:
 
 # float / unfloat window and center on screen
 rcmd - t : yabai -m window --toggle float
-rcmd - e : yabai -m window --toggle sticky --toggle pip
 
 # float / unfloat window and center on screen
 rcmd - r : yabai -m window --toggle float;\

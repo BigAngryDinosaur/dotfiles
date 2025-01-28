@@ -1,11 +1,11 @@
 import {
+  rule,
   simlayer, toKey
 } from "karabiner.ts";
 
+import { duoModifiers } from "../utils";
+
 export default function superwhisper() {
-  return simlayer('s', 'superwhisper-mode', 350)
-    .manipulators({
-      d: toKey('equal_sign', 'Hyper', {}),
-      c: toKey('k', '⌘⌥')
-    })
+  return [
+  ]
 }

@@ -58,7 +58,7 @@ export function duoModifiers(
       result.push(
         mapSimultaneous(keys.split('') as (LetterKeyCode | KeyAlias)[], {
           to_after_key_up,
-        })
+        }, 100)
           .toNotificationMessage(id, m) // Must go first or to() doesn't work
           .to(`left_${firstMod}`, restMods),
       )
