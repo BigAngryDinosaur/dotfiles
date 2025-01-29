@@ -26,6 +26,7 @@ yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^
 yabai -m rule --add app="^Spotify$" space=11 
 yabai -m rule --add app='^Slack$' space=11
 yabai -m rule --add app="^System Settings$" scratchpad="System Settings" grid="22:22:4:4:20:20"
+yabai -m rule --add app="^Bear$" scratchpad="Bear" grid="22:22:1:1:20:20" sticky=on
 
 yabai -m rule --apply
 

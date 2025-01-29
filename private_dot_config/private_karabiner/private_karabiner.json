@@ -97,6 +97,22 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://confetti"
+                  }
+                ]
               }
             ]
           },
@@ -149,7 +165,7 @@
                   {
                     "set_notification_message": {
                       "id": "duo-layer-duo-layer-l-;",
-                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
+                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings\nB | Bear"
                     }
                   }
                 ],
@@ -295,6 +311,24 @@
                 "to": [
                   {
                     "shell_command": "open -a \"System Settings\".app"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-l-;",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a \"Bear\".app"
                   }
                 ],
                 "conditions": [
@@ -1001,6 +1035,177 @@
             ]
           },
           {
+            "description": "DuoLayer . /",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "simultaneous": [
+                    {
+                      "key_code": "period"
+                    },
+                    {
+                      "key_code": "slash"
+                    }
+                  ],
+                  "simultaneous_options": {
+                    "to_after_key_up": [
+                      {
+                        "set_variable": {
+                          "name": "duo-layer-.-/",
+                          "value": 0
+                        }
+                      },
+                      {
+                        "set_notification_message": {
+                          "id": "duo-layer-duo-layer-.-/",
+                          "text": ""
+                        }
+                      }
+                    ]
+                  },
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 200
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "duo-layer-.-/",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "set_notification_message": {
+                      "id": "duo-layer-duo-layer-.-/",
+                      "text": "g = 'https://github.com'\ny = 'https://www.youtube.com'\nh = 'https://news.ycombinator.com'\nr = 'https://old.reddit.com'\nu = 'https://www.ubereats.com'\nw = 'https://www.wolt.com'"
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "g"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://github.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "y"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.youtube.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://news.ycombinator.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://old.reddit.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "u"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.ubereats.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w"
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"https://www.wolt.com\""
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "duo-layer-.-/",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "XCode",
             "manipulators": [
               {
@@ -1542,6 +1747,35 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
                       "^dev.zed.Zed$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Chrome",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Chrome action group\"'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.google.Chrome.canary$"
                     ]
                   }
                 ]

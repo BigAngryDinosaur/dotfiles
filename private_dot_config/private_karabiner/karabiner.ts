@@ -12,6 +12,8 @@ import app_vscode from "./rules/vscode.ts";
 import app_zed from "./rules/zed.ts";
 import superwhisper from "./rules/superwhisper.ts";
 import { generalMappings } from "./rules/general.ts";
+import layer_openLinks from "./rules/links.ts";
+import app_chrome from "./rules/chrome.ts";
 
 const args = Bun.argv;
 const isDryRun = args[2] === "--dry-run";
@@ -38,10 +40,13 @@ writeToProfile(isDryRun ? "--dry-run" : "Default", [
 
   layer_launchApp(),
   layer_emojiAndSnippet(),
+  layer_openLinks(),
+
 
   app_xcode(),
   app_vscode(),
   app_zed(),
+  app_chrome(),
 
   ...superwhisper()
 ]);

@@ -1,4 +1,4 @@
-import { hyperLayer, map, rule, toApp, toKey } from "karabiner.ts";
+import { hyperLayer, map, rule, to$, toApp, toKey, withModifier } from "karabiner.ts";
 
 
 export const generalMappings = () => [
@@ -8,7 +8,10 @@ export const generalMappings = () => [
     {
       'end': toKey('q', '⌘⌥'),
       'f14': toKey('return_or_enter', '⌘⌥'),
-    }
+    },
+    withModifier('right_shift')({
+      'c': to$(`open -g raycast://confetti`)
+    })
   ]),
 ]
 
