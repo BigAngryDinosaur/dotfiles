@@ -40,6 +40,22 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "home"
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": [
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "page_up"
                 },
                 "to": [
