@@ -12,8 +12,7 @@ export default function layer_launchApp() {
     { name: "Google Chrome", shortcut: "c" },
     { name: "Firefox Developer Edition", shortcut: "f" },
     { name: "Sourcetree", shortcut: "t" },
-    { name: "System Settings", shortcut: "z" },
-    { name: "Bear", shortcut: "b" },
+    { name: "System Settings", shortcut: "z" }
   ];
   let hint = apps.map(app => `${app.shortcut.toUpperCase()} | ${app.name}`).join('\n');
   let layer = duoLayer('l', ';').notification(hint)

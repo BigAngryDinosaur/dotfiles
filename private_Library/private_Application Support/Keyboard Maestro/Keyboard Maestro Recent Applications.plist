@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>org.pqrs.Karabiner-EventViewer</string>
+		<key>Name</key>
+		<string>Karabiner-EventViewer</string>
+		<key>NewFile</key>
+		<string>/Applications/Karabiner-EventViewer.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.apple.finder</string>
 		<key>Name</key>
 		<string>Finder</string>
@@ -97,14 +105,6 @@
 		<string>App Store</string>
 		<key>NewFile</key>
 		<string>/System/Applications/App Store.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>org.pqrs.Karabiner-EventViewer</string>
-		<key>Name</key>
-		<string>Karabiner-EventViewer</string>
-		<key>NewFile</key>
-		<string>/Applications/Karabiner-EventViewer.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>

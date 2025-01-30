@@ -40,22 +40,6 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "home"
-                },
-                "to": [
-                  {
-                    "key_code": "left_command",
-                    "modifiers": [
-                      "option",
-                      "control",
-                      "shift"
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
                   "key_code": "page_up"
                 },
                 "to": [
@@ -102,7 +86,22 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "f14"
+                  "key_code": "keypad_equal_sign"
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "command",
+                      "option"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "home"
                 },
                 "to": [
                   {
@@ -181,7 +180,7 @@
                   {
                     "set_notification_message": {
                       "id": "duo-layer-duo-layer-l-;",
-                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings\nB | Bear"
+                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
                     }
                   }
                 ],
@@ -327,24 +326,6 @@
                 "to": [
                   {
                     "shell_command": "open -a \"System Settings\".app"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "duo-layer-l-;",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "b"
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a \"Bear\".app"
                   }
                 ],
                 "conditions": [
