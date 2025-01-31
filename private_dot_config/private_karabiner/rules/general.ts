@@ -1,4 +1,4 @@
-import { hyperLayer, map, rule, to$, toApp, toKey, withModifier } from "karabiner.ts";
+import { hyperLayer, map, mapDoubleTap, rule, to$, toApp, toKey, withModifier } from "karabiner.ts";
 
 // | Caps            | Key Combination     |
 // |-----------------|---------------------|
@@ -10,7 +10,7 @@ import { hyperLayer, map, rule, to$, toApp, toKey, withModifier } from "karabine
 // Modifiers: '⌘' | '⌥' | '⌃' | '⇧'
 
 export const generalMappings = () => [
-  rule('Hyper Meh').manipulators([
+  rule('General').manipulators([
     map('page_up').toHyper(),
     map('page_down').toMeh(),
     {
@@ -20,6 +20,7 @@ export const generalMappings = () => [
     },
     withModifier('right_shift')({
       'c': to$('open -g raycast://confetti')
-    })
+    }),
+    mapDoubleTap('right_shift').to('backslash', '⌥')
   ])
 ]

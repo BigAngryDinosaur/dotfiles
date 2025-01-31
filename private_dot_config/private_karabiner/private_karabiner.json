@@ -35,7 +35,7 @@
             ]
           },
           {
-            "description": "Hyper Meh",
+            "description": "General",
             "manipulators": [
               {
                 "type": "basic",
@@ -128,6 +128,72 @@
                     "shell_command": "open -g raycast://confetti"
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "backslash",
+                    "modifiers": [
+                      "option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "double-tap-right_shift",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_shift"
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double-tap-right_shift",
+                      "value": 1
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "double-tap-right_shift",
+                    "value": 1
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "key_code": "right_shift"
+                    },
+                    {
+                      "set_variable": {
+                        "name": "double-tap-right_shift",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double-tap-right_shift",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                }
               }
             ]
           },
@@ -180,7 +246,7 @@
                   {
                     "set_notification_message": {
                       "id": "duo-layer-duo-layer-l-;",
-                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
+                      "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome Canary\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
                     }
                   }
                 ],
@@ -271,7 +337,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a \"Google Chrome\".app"
+                    "shell_command": "open -a \"Google Chrome Canary\".app"
                   }
                 ],
                 "conditions": [

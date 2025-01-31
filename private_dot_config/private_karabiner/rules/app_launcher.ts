@@ -9,7 +9,7 @@ export default function layer_launchApp() {
     { name: "Spotify", shortcut: "s" },
     { name: "Xcode", shortcut: "x" },
     { name: "Visual Studio Code", shortcut: "v" },
-    { name: "Google Chrome", shortcut: "c" },
+    { name: "Google Chrome Canary", shortcut: "c" },
     { name: "Firefox Developer Edition", shortcut: "f" },
     { name: "Sourcetree", shortcut: "t" },
     { name: "System Settings", shortcut: "z" }

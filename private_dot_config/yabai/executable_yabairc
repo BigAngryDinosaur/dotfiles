@@ -19,6 +19,7 @@ yabai -m rule --add app="^Xcode$" space=1
 yabai -m rule --add app="^Simulator$" space=1 manage=on
 yabai -m rule --add app="^CleanShot X$" sticky=on manage=off opacity=1.0
 yabai -m rule --add app="^Kando$" manage=off opacity=1.0
+yabai -m rule --add app="^Ghostty$" manage=off opacity=1.0
 
 yabai -m rule --add app="^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|superwhisper|Notes)$" manage=off opacity=1.0
 yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|superwhisper|Notes)$' action='window="$(yabai -m query --windows --window)"; display="$(/opt/homebrew/bin/yabai -m query --displays --window)"; coords="$(/opt/homebrew/bin/jq --argjson window "$window" --argjson display "$display" -nr "((\$display.frame | .x + .w / 2) - (\$window.frame.w / 2) | tostring) + \":\" + ((\$display.frame | .y + .h / 2) - (\$window.frame.h / 2) | tostring)")"; /opt/homebrew/bin/yabai -m window --move "abs:$coords"'
