@@ -6,4 +6,5 @@ private_dot_config/private_karabiner/private_automatic_backups/
 .config/karabiner/automatic_backups
 .config/nvim/lazy-lock.json
 
+.config/fabric/.env
 
