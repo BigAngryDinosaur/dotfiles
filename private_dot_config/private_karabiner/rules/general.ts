@@ -1,4 +1,5 @@
-import { hyperLayer, map, mapDoubleTap, rule, to$, toApp, toKey, withModifier } from "karabiner.ts";
+import { map, rule, to$, toKey, withModifier } from "karabiner.ts";
+import doubleTap from "./doubleTap";
 
 // | Caps            | Key Combination     |
 // |-----------------|---------------------|
@@ -21,6 +22,9 @@ export const generalMappings = () => [
     withModifier('right_shift')({
       'c': to$('open -g raycast://confetti')
     }),
-    mapDoubleTap('right_shift').to('backslash', '⌥')
-  ])
+  ]),
+  doubleTap({ key_code: "right_shift" }, { key_code: "backslash", modifiers: ["left_option"] }, "Double Tap right shift to opt+backslash"),
+  doubleTap({ key_code: "left_shift" }, { key_code: "keypad_4" }, "Double Tap left shift to cmd+opt+[")
 ]
+
+

@@ -1,5 +1,4 @@
 import {
-  map,
   mapPointingButton, rule,
   toPointingButton,
   writeToProfile
@@ -14,29 +13,15 @@ import superwhisper from "./rules/superwhisper.ts";
 import { generalMappings } from "./rules/general.ts";
 import layer_openLinks from "./rules/links.ts";
 import app_chrome from "./rules/chrome.ts";
+import kando from "./rules/kando.ts";
 
 const args = Bun.argv;
 const isDryRun = args[2] === "--dry-run";
 
 writeToProfile(isDryRun ? "--dry-run" : "Default", [
-  // Hyper Key (Caps Lock)
-  // rule("Caps Lock -> Hyper").manipulators([map("caps_lock").toHyper()]),
-
-  // Kando
-  rule("Kando").manipulators([
-    mapPointingButton("button4")
-      .toIfAlone(toPointingButton("button4"))
-      .toIfHeldDown({
-        key_code: "home",
-        modifiers: ["right_shift", "right_command", "right_option", "right_control"],
-        halt: true,
-      })
-      .parameters({
-        "basic.to_if_held_down_threshold_milliseconds": 200,
-      }),
-  ]),
-
   ...generalMappings(),
+
+  kando(),
 
   layer_launchApp(),
   layer_emojiAndSnippet(),

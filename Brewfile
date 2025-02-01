@@ -73,6 +73,7 @@ brew "zoxide"
 brew "zplug"
 brew "zsh"
 brew "uv"
+brew "portaudio"
 
 cask "1password-cli"
 cask "betterdisplay"
