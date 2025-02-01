@@ -1,6 +1,4 @@
 
-private_dot_config/private_karabiner/private_automatic_backups/
-
 .oh-my-zsh
 
 .config/karabiner/automatic_backups
@@ -8,3 +6,4 @@ private_dot_config/private_karabiner/private_automatic_backups/
 
 .config/fabric/.env
 
+.config/superwhisper/recordings
