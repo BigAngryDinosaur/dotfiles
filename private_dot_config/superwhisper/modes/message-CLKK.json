@@ -1,0 +1,33 @@
+{
+  "activationApps" : [
+
+  ],
+  "activationSites" : [
+
+  ],
+  "adjustOutputVolume" : false,
+  "contextFromActiveApplication" : true,
+  "contextFromClipboard" : true,
+  "contextFromSelection" : false,
+  "contextTemplate" : "Use the copied text as context to complete this task.\n\nCopied text: ",
+  "description" : "",
+  "diarize" : false,
+  "key" : "message-CLKK",
+  "language" : "en",
+  "languageModelEnabled" : true,
+  "languageModelID" : "sw-claude-3-5-sonnet",
+  "literalPunctuation" : false,
+  "name" : "Coding",
+  "prompt" : "**Expert coder**\n\nYou are an expert in understanding and digesting computer coding and computer languages.\n| Use the existing code to figure out which programming language it is written in. Then write efficient and readable code based on the command I provide.\n| In some cases the programming language may be mentioned in a comment near the top of the file.\n| Write the explanation of the code in comments above or beside the code. Keep the explanation succinct and short.\n",
+  "promptExamples" : [
+
+  ],
+  "realtimeOutput" : false,
+  "script" : "",
+  "scriptEnabled" : false,
+  "translateToEnglish" : false,
+  "type" : "custom",
+  "useSystemAudio" : false,
+  "version" : 1,
+  "voiceModelID" : "sw-ultra-cloud-v1-east"
+}
