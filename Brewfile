@@ -88,6 +88,7 @@ cask "sequel-ace"
 cask "kando"
 cask "hiddenbar"
 cask "raycast"
+cask "ghostty"
 
 vscode "alefragnani.project-manager"
 vscode "bierner.github-markdown-preview"

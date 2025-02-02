@@ -1,15 +1,13 @@
 
 import {
   withModifier,
-  rule, ifApp,
-  toKey,
-  to$
+  rule, ifApp
 } from "karabiner.ts";
 
-import { km, raycast } from "../utils";
+import { km } from "../utils";
 
 export default function app_chrome() {
-  return rule('Chrome', ifApp('^com.google.Chrome.canary$')).manipulators([
+  return rule('Chrome', ifApp('^com.google.Chrome.*$')).manipulators([
     withModifier('right_shift')({
       'w': km('Chrome action group')
     })
