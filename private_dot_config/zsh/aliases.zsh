@@ -13,4 +13,6 @@ alias cmap="chezmoi apply"
 alias cma="chezmoi add"
 alias cmd="chezmoi diff"
 
-
+# git
+unalias gaa
+alias gad="git add -A"
