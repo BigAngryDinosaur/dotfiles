@@ -57,6 +57,9 @@ meh - u  : yabai -m window --display 2; yabai -m display --focus 2
 meh - i  : yabai -m window --display 1; yabai -m display --focus 1
 meh - o  : yabai -m window --display 3; yabai -m display --focus 3
 
+meh - p : yabai -m window --space prev; yabai -m space --focus prev
+meh - n : yabai -m window --space next; yabai -m space --focus next
+
 # show next space per display
 hyper - 1 : yabai -m space --focus 1 || yabai -m space --focus 4
 hyper - 2 : yabai -m space --focus 2 || yabai -m space --focus 5
