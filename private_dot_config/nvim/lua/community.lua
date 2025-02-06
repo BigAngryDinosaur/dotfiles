@@ -10,6 +10,8 @@ return {
   { import = "astrocommunity.pack.swift" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
   -- import/override with your plugins folder
 }
