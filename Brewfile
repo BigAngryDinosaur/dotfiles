@@ -74,6 +74,7 @@ brew "zplug"
 brew "zsh"
 brew "uv"
 brew "portaudio"
+brew "atuin"
 
 cask "1password-cli"
 cask "betterdisplay"
