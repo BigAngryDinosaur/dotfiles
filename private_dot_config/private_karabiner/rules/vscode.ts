@@ -7,7 +7,7 @@ import {
 import { km } from "../utils";
 
 export default function app_vscode() {
-  return rule('VSCode', ifApp('^com.microsoft.VSCode$')).manipulators([
+  return rule('VSCode', ifApp('^com.microsoft.VSCode(?:Insiders)?$')).manipulators([
     withModifier('right_shift')({
       'a': toKey('-', '⌃'), // Back
       'd': toKey('-', '⌃⇧'), // Forward

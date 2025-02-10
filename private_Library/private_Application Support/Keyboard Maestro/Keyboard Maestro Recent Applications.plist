@@ -4,19 +4,35 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>md.obsidian</string>
-		<key>Name</key>
-		<string>Obsidian</string>
-		<key>NewFile</key>
-		<string>/Applications/Obsidian.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.apple.finder</string>
 		<key>Name</key>
 		<string>Finder</string>
 		<key>NewFile</key>
 		<string>/System/Library/CoreServices/Finder.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.systempreferences</string>
+		<key>Name</key>
+		<string>System Settings</string>
+		<key>NewFile</key>
+		<string>/System/Applications/System Settings.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.superduper.superwhisper</string>
+		<key>Name</key>
+		<string>superwhisper</string>
+		<key>NewFile</key>
+		<string>/Applications/superwhisper.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.openai.chat</string>
+		<key>Name</key>
+		<string>ChatGPT</string>
+		<key>NewFile</key>
+		<string>/Applications/ChatGPT.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -36,6 +52,14 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>com.microsoft.VSCode</string>
+		<key>Name</key>
+		<string>Visual Studio Code</string>
+		<key>NewFile</key>
+		<string>/Applications/Visual Studio Code.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.google.Chrome</string>
 		<key>Name</key>
 		<string>Google Chrome</string>
@@ -52,14 +76,6 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.torusknot.SourceTreeNotMAS</string>
-		<key>Name</key>
-		<string>Sourcetree</string>
-		<key>NewFile</key>
-		<string>/Applications/Sourcetree.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.tinyspeck.slackmacgap</string>
 		<key>Name</key>
 		<string>Slack</string>
@@ -68,43 +84,11 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.openai.chat</string>
+		<string>md.obsidian</string>
 		<key>Name</key>
-		<string>ChatGPT</string>
+		<string>Obsidian</string>
 		<key>NewFile</key>
-		<string>/Applications/ChatGPT.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.superduper.superwhisper</string>
-		<key>Name</key>
-		<string>superwhisper</string>
-		<key>NewFile</key>
-		<string>/Applications/superwhisper.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.iphonesimulator</string>
-		<key>Name</key>
-		<string>Simulator</string>
-		<key>NewFile</key>
-		<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.Preview</string>
-		<key>Name</key>
-		<string>Preview</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Preview.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.mitchellh.ghostty</string>
-		<key>Name</key>
-		<string>Ghostty</string>
-		<key>NewFile</key>
-		<string>/Applications/Ghostty.app</string>
+		<string>/Applications/Obsidian.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -116,27 +100,27 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.amazonaws.acvc.osx</string>
+		<string>com.apple.iphonesimulator</string>
 		<key>Name</key>
-		<string>AWS VPN Client</string>
+		<string>Simulator</string>
 		<key>NewFile</key>
-		<string>/Applications/AWS VPN Client/AWS VPN Client.app</string>
+		<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.systempreferences</string>
+		<string>com.mitchellh.ghostty</string>
 		<key>Name</key>
-		<string>System Settings</string>
+		<string>Ghostty</string>
 		<key>NewFile</key>
-		<string>/System/Applications/System Settings.app</string>
+		<string>/Applications/Ghostty.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.1password.1password</string>
+		<string>org.pqrs.Karabiner-EventViewer</string>
 		<key>Name</key>
-		<string>1Password</string>
+		<string>Karabiner-EventViewer</string>
 		<key>NewFile</key>
-		<string>/Applications/1Password.app</string>
+		<string>/Applications/Karabiner-EventViewer.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -148,11 +132,99 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>org.pqrs.Karabiner-EventViewer</string>
+		<string>com.apple.AppStore</string>
 		<key>Name</key>
-		<string>Karabiner-EventViewer</string>
+		<string>App Store</string>
 		<key>NewFile</key>
-		<string>/Applications/Karabiner-EventViewer.app</string>
+		<string>/System/Applications/App Store.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>dev.zed.Zed</string>
+		<key>Name</key>
+		<string>Zed</string>
+		<key>NewFile</key>
+		<string>/Applications/Zed.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.TextEdit</string>
+		<key>Name</key>
+		<string>TextEdit</string>
+		<key>NewFile</key>
+		<string>/System/Applications/TextEdit.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.googlecode.iterm2</string>
+		<key>Name</key>
+		<string>iTerm</string>
+		<key>NewFile</key>
+		<string>/Applications/iTerm.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.archiveutility</string>
+		<key>Name</key>
+		<string>Archive Utility</string>
+		<key>NewFile</key>
+		<string>/System/Library/CoreServices/Applications/Archive Utility.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.installer</string>
+		<key>Name</key>
+		<string>Installer</string>
+		<key>NewFile</key>
+		<string>/System/Library/CoreServices/Installer.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.helpviewer</string>
+		<key>Name</key>
+		<string>Tips</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Tips.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.drivefs</string>
+		<key>Name</key>
+		<string>Google Drive</string>
+		<key>NewFile</key>
+		<string>/Applications/Google Drive.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.torusknot.SourceTreeNotMAS</string>
+		<key>Name</key>
+		<string>Sourcetree</string>
+		<key>NewFile</key>
+		<string>/Applications/Sourcetree.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Preview</string>
+		<key>Name</key>
+		<string>Preview</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Preview.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.amazonaws.acvc.osx</string>
+		<key>Name</key>
+		<string>AWS VPN Client</string>
+		<key>NewFile</key>
+		<string>/Applications/AWS VPN Client/AWS VPN Client.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.1password.1password</string>
+		<key>Name</key>
+		<string>1Password</string>
+		<key>NewFile</key>
+		<string>/Applications/1Password.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -188,22 +260,6 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.AppStore</string>
-		<key>Name</key>
-		<string>App Store</string>
-		<key>NewFile</key>
-		<string>/System/Applications/App Store.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.googlecode.iterm2</string>
-		<key>Name</key>
-		<string>iTerm</string>
-		<key>NewFile</key>
-		<string>/Applications/iTerm.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>fm.qmk.toolbox</string>
 		<key>Name</key>
 		<string>QMK Toolbox</string>
@@ -217,22 +273,6 @@
 		<string>Alfred Preferences</string>
 		<key>NewFile</key>
 		<string>/Applications/Alfred 5.app/Contents/Preferences/Alfred Preferences.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.archiveutility</string>
-		<key>Name</key>
-		<string>Archive Utility</string>
-		<key>NewFile</key>
-		<string>/System/Library/CoreServices/Applications/Archive Utility.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.microsoft.VSCode</string>
-		<key>Name</key>
-		<string>Visual Studio Code</string>
-		<key>NewFile</key>
-		<string>/Applications/Visual Studio Code.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -265,22 +305,6 @@
 		<string>Mail</string>
 		<key>NewFile</key>
 		<string>/System/Applications/Mail.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.TextEdit</string>
-		<key>Name</key>
-		<string>TextEdit</string>
-		<key>NewFile</key>
-		<string>/System/Applications/TextEdit.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.helpviewer</string>
-		<key>Name</key>
-		<string>Tips</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Tips.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -353,14 +377,6 @@
 		<string>Audio MIDI Setup</string>
 		<key>NewFile</key>
 		<string>/System/Applications/Utilities/Audio MIDI Setup.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.installer</string>
-		<key>Name</key>
-		<string>Installer</string>
-		<key>NewFile</key>
-		<string>/System/Library/CoreServices/Installer.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>

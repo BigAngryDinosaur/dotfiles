@@ -1594,7 +1594,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
@@ -1622,7 +1622,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
@@ -1649,7 +1649,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
@@ -1677,7 +1677,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
@@ -1701,7 +1701,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
@@ -1725,7 +1725,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "^com.microsoft.VSCode$"
+                      "^com.microsoft.VSCode(?:Insiders)?$"
                     ]
                   }
                 ]
