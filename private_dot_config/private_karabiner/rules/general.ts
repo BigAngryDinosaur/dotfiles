@@ -24,7 +24,8 @@ export const generalMappings = () => [
     }),
   ]),
   doubleTap({ key_code: "right_shift" }, { key_code: "backslash", modifiers: ["left_option"] }, "Double Tap right shift to opt+backslash"),
-  doubleTap({ key_code: "left_shift" }, { key_code: "keypad_4" }, "Double Tap left shift to cmd+opt+[")
+  doubleTap({ key_code: "left_shift" }, { key_code: "keypad_4" }, "Double Tap left shift to keypad4"),
+  doubleTap({ key_code: "left_command" }, { key_code: "keypad_5" }, "Double Tap left shift to keypad5")
 ]
 
 

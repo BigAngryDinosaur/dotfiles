@@ -175,7 +175,7 @@
             ]
           },
           {
-            "description": "Double Tap left shift to cmd+opt+[",
+            "description": "Double Tap left shift to keypad4",
             "manipulators": [
               {
                 "type": "basic",
@@ -237,6 +237,77 @@
                     {
                       "set_variable": {
                         "name": "double-tap-left_shift",
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "description": "Double Tap left shift to keypad5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_command",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_command"
+                },
+                "to": [
+                  {
+                    "key_code": "keypad_5"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_command",
+                    "type": "variable_unless",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_command"
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double-tap-left_command",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_command",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "key_code": "left_command"
+                    },
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_command",
                         "value": 0
                       }
                     }

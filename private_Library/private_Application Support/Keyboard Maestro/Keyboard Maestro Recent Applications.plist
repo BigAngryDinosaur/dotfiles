@@ -212,14 +212,6 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.amazonaws.acvc.osx</string>
-		<key>Name</key>
-		<string>AWS VPN Client</string>
-		<key>NewFile</key>
-		<string>/Applications/AWS VPN Client/AWS VPN Client.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.1password.1password</string>
 		<key>Name</key>
 		<string>1Password</string>
