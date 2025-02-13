@@ -13,5 +13,7 @@ return {
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.color.ccc-nvim" },
+  { import = "astrocommunity.syntax.vim-easy-align" },
   -- import/override with your plugins folder
 }
