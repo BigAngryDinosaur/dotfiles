@@ -4,11 +4,11 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.iceljdgfkkipenkibojdhfdbkbckmdah</string>
+		<string>com.google.Chrome.canary.app.agimnkijcaahngcdmfeangaknmldooml</string>
 		<key>Name</key>
-		<string>DeepSeek</string>
+		<string>YouTube</string>
 		<key>NewFile</key>
-		<string>~/Applications/Chrome Canary Apps.localized/DeepSeek.app</string>
+		<string>~/Applications/Chrome Canary Apps.localized/YouTube.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
