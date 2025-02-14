@@ -17,7 +17,7 @@ then
    APPS=$(echo $QUERY | jq '.[].app')
    TITLES=$(echo $QUERY | jq '.[].title')
 
-   IGNORED_APPS=("Ghostty" "Reader" "Obsidian" "Finder" "ChatGPT" "Superwhisper" "Readwise Reader")
+   IGNORED_APPS=("Ghostty" "Reader" "Obsidian" "Finder" "ChatGPT" "Superwhisper" "Readwise Reader" "YouTube" "Hacker News" "Reddit" "Google AI Studio" "Claude" "DeepSeek")
  
    if grep -q "\"" <<< $APPS;
    then
