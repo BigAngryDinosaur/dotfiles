@@ -1,8 +1,8 @@
 macos-non-native-fullscreen = true
 window-padding-x = 10
-keybind = global:opt+\=toggle_quick_terminal
+#keybind = global:opt+\=toggle_quick_terminal
+#keybind = global:opt+\=toggle_visibility
 quick-terminal-position = bottom
 quick-terminal-autohide = false
 quick-terminal-screen = macos-menu-bar
-initial-window = false
-window-height = 317
+initial-window = true

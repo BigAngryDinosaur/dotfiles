@@ -54,189 +54,54 @@ default=(
 sketchybar --default "${default[@]}"
 
 
-# LEFT
+#--- LEFT ---
 
-# SPACE 
-# ------------------------------------------------
-sketchybar --add event window_change
+# Spaces  
+source "$ITEM_DIR/spaces.sh"
 
-COLORS_SPACE=($COLOR_YELLOW $COLOR_CYAN $COLOR_MAGENTA $COLOR_WHITE $COLOR_BLUE $COLOR_RED $COLOR_GREEN $COLOR_BROWN $COLOR_YELLOW $COLOR_CYAN $COLOR_MAGENTA $COLOR_YELLOW $COLOR_CYAN $COLOR_MAGENTA)
-LENGTH=${#ICONS_SPACE[@]}
+# Separator
+source "$ITEM_DIR/separator.sh" "separator.l2" "left" 4 4
 
-for i in "${!ICONS_SPACE[@]}"
-do
-  sid=$(($i+1))
-  PAD_LEFT=6
-  PAD_RIGHT=6
-  if [[ $i == 0 ]]; then
-    PAD_LEFT=6
-  elif [[ $i == $(($LENGTH-1)) ]]; then
-    PAD_RIGHT=6
-  fi
-  sketchybar --add space space.$sid left                                       \
-             --set       space.$sid script="$PLUGIN_DIR/app_space.sh"          \
-                                    associated_space=$sid                      \
-                                    padding_left=$PAD_LEFT                     \
-                                    padding_right=$PAD_RIGHT                   \
-                                    background.color=${COLORS_SPACE[i]}        \
-                                    background.border_width=0                  \
-                                    background.corner_radius=8                 \
-                                    background.height=20                       \
-                                    label.font="$SYMBOLS_FONT:Regular:16.0" \
-                                    icon.font="$FONT:Regular:12.0" \
-                                    icon=${ICONS_SPACE[i]}                     \
-                                    icon.color=${COLORS_SPACE[i]}              \
-                                    label="_"                                  \
-                                    label.color=${COLORS_SPACE[i]}             \
-             --subscribe space.$sid front_app_switched window_change
-done
-
-sketchybar --add bracket spaces '/space\..*/'                      \
-           --set         spaces script="$PLUGIN_DIR/space_bracket.sh '${COLORS_SPACE[*]}'"          \
-                                background.color=$COLOR_BACKGROUND \
-           --subscribe spaces front_app_switched space_change
-                                
-                                
-
-sketchybar --add item seperator.l2 left                   \
-           --set      seperator.l2 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off
-
-
+# Front App
 source "$ITEM_DIR/front_app.sh"
 
-# Center
+#-------------------------------------
+
+
+
+
+
+#--- CENTER ---
+
+# Spotify
 source "$ITEM_DIR/spotify.sh"
 
 
-# Right
-sketchybar --add item time right                        \
-           --set      time script="$PLUGIN_DIR/time.sh" \
-                           update_freq=5                \
-                           padding_left=2               \
-                           padding_right=6              \
-                           background.color=$COLOR_WHITE  \
-                           background.border_width=0    \
-                           background.corner_radius=8   \
-                           background.height=20         \
-                           icon=$ICON_CLOCK             \
-                           icon.highlight=on            \
-                           label.highlight=on           \
-           --add item date right                        \
-           --set      date script="$PLUGIN_DIR/date.sh" \
-                           update_freq=60               \
-                           padding_left=6               \
-                           padding_right=2              \
-                           background.color=$COLOR_WHITE  \
-                           background.border_width=0    \
-                           background.height=20         \
-                           background.corner_radius=8   \
-                           icon=$ICON_CALENDAR          \
-                           icon.highlight=on            \
-                           label.highlight=on           \
-
-sketchybar --add bracket clock time date                          \
-           --set         clock background.color=$COLOR_BACKGROUND \
-                               background.border_color=$COLOR_WHITE
+#-------------------------------------
 
 
-sketchybar --add item seperator.r1 right                  \
-           --set      seperator.r1 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off
 
-sketchybar --add item  ip_address right                              \
-           --set       ip_address script="$PLUGIN_DIR/ip_address.sh" \
-                                  update_freq=30                     \
-                                  padding_left=2                     \
-                                  padding_right=6                    \
-                                  background.border_width=0    \
-                                  background.height=20         \
-                                  background.corner_radius=8   \
-                                  icon.highlight=on                  \
-                                  label.highlight=on                 \
-           --subscribe ip_address wifi_change                        \
-                                                                     \
-           --add item  volume right                                  \
-           --set       volume script="$PLUGIN_DIR/volume.sh"         \
-                              padding_left=2                         \
-                              padding_right=2                        \
-                              background.border_width=0    \
-                              background.color=$COLOR_BLUE    \
-                              background.height=20         \
-                              background.corner_radius=8   \
-                              icon.highlight=on                  \
-                              label.highlight=on                 \
-           --subscribe volume volume_change                          \
-                                                                     \
-           --add item  battery right                                 \
-           --set       battery script="$PLUGIN_DIR/battery.sh"       \
-                               update_freq=120                       \
-                               padding_left=6                        \
-                               padding_right=2                      \
-                               background.color=$COLOR_BLUE    \
-                               background.border_width=0    \
-                               background.height=20         \
-                               background.corner_radius=8   \
-                               icon.highlight=on                  \
-                               label.highlight=on                 \
-           --subscribe battery system_woke power_source_change
 
-sketchybar --add bracket status ip_address volume battery           \
-           --set         status background.color=$COLOR_BACKGROUND  \
-                                background.border_color=$COLOR_BLUE
+#--- RIGHT ---
 
-sketchybar --add item seperator.r2 right                  \
-           --set      seperator.r2 padding_left=4         \
-                                   padding_right=4        \
-                                   background.drawing=off \
-                                   icon.drawing=off       \
-                                   label.drawing=off      
-                              
-sketchybar --add item ram right                         \
-           --set      ram script="$PLUGIN_DIR/ram.sh"   \
-                          update_freq=60                \
-                          padding_left=2                \
-                          padding_right=6               \
-                          background.border_width=0     \
-                          background.color=$COLOR_CYAN    \
-                          background.height=20          \
-                          icon=$ICON_RAM                \
-                          icon.highlight=on                  \
-                          label.highlight=on                 \
-                                                        \
-           --add item disk right                        \
-           --set      disk script="$PLUGIN_DIR/disk.sh" \
-                           update_freq=60               \
-                           padding_left=2               \
-                           padding_right=2              \
-                           background.border_width=0    \
-                           background.color=$COLOR_CYAN    \
-                           background.height=20         \
-                           icon=$ICON_DISK              \
-                           icon.highlight=on                  \
-                           label.highlight=on                 \
-                                                        \
-           --add item cpu right                         \
-           --set      cpu script="$PLUGIN_DIR/cpu.sh"   \
-                          update_freq=60                \
-                          padding_left=6                \
-                          padding_right=2               \
-                          background.border_width=0     \
-                          background.color=$COLOR_CYAN    \
-                          background.height=20          \
-                          icon=$ICON_CPU                \
-                          icon.highlight=on                  \
-                          label.highlight=on                 \
+# Clock
+source "$ITEM_DIR/clock.sh"
 
-sketchybar --add bracket activity ram disk cpu                      \
-           --set         activity background.color=$COLOR_BACKGROUND     \
-                                  background.border_color=$COLOR_CYAN
+# Separator
+source "$ITEM_DIR/separator.sh" "separator.r1" "right" 4 4
+
+# Status items (ip_address, volume, battery)
+source "$ITEM_DIR/status.sh"
+
+# Separator
+source "$ITEM_DIR/separator.sh" "separator.r2" "right" 4 4
+
+# Activity items (ram, disk, cpu)
+source "$ITEM_DIR/activity.sh"
+
+#-------------------------------------
+
+
 
 
 ##### Force all scripts to run the first time (never do this in a script) #####

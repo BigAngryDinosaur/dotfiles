@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>com.mitchellh.ghostty</string>
+		<key>Name</key>
+		<string>Ghostty</string>
+		<key>NewFile</key>
+		<string>/Applications/Ghostty.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.apple.finder</string>
 		<key>Name</key>
 		<string>Finder</string>
@@ -105,14 +113,6 @@
 		<string>Simulator</string>
 		<key>NewFile</key>
 		<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.mitchellh.ghostty</string>
-		<key>Name</key>
-		<string>Ghostty</string>
-		<key>NewFile</key>
-		<string>/Applications/Ghostty.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>

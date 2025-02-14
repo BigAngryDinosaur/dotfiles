@@ -2,15 +2,6 @@
 
 FRONT_APP_SCRIPT='sketchybar --set $NAME label="$INFO"'
 
-yabai=(
-  script="$PLUGIN_DIR/yabai.sh"
-  label.drawing=off
-  icon.width=30
-  icon=$YABAI_GRID
-  icon.color=$ORANGE
-  associated_display=active
-)
-
 front_app=(
   script="$FRONT_APP_SCRIPT"
   background.color=$COLOR_WHITE
@@ -21,14 +12,12 @@ front_app=(
   associated_display=active
 )
 
+# Create items and bracket
 sketchybar --add event window_focus            \
            --add event windows_on_spaces       \
-           --add item yabai left               \
-           --set yabai "${yabai[@]}"           \
-           --subscribe yabai window_focus      \
-                             windows_on_spaces \
-                             mouse.clicked     \
-                                               \
            --add item front_app left           \
            --set front_app "${front_app[@]}"   \
-           --subscribe front_app front_app_switched
+           --subscribe front_app front_app_switched \
+           --add bracket front_group front_app \
+           --set front_group background.color=$COLOR_BACKGROUND \
+                           background.border_color=$COLOR_WHITE

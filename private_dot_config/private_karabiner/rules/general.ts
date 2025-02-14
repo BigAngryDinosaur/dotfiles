@@ -20,7 +20,7 @@ export const generalMappings = () => [
       'home': toKey('return_or_enter', '⌘⌥'),
     },
     withModifier('right_shift')({
-      'c': to$('open -g raycast://confetti')
+      ';': to$('open -g raycast://confetti')
     }),
   ]),
   doubleTap({ key_code: "right_shift" }, { key_code: "backslash", modifiers: ["left_option"] }, "Double Tap right shift to opt+backslash"),

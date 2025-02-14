@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"dev": "bun --watch karabiner.ts",
-		"dry-run": "bun --watch karabiner.ts --dry-run"
+		"dry-run": "bun --watch karabiner.ts --dry-run",
+		"build": "bun karabiner.ts"
 	},
 	"devDependencies": {
 		"@types/bun": "^1.1.6",
