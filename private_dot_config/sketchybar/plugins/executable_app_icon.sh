@@ -81,7 +81,7 @@ case "$1" in
 "Photo Booth")
 	RESULT=$ICON_CAMERA
 	;;
-"Google Chrome")
+"Google Chrome" | "Google Chrome Canary")
 	RESULT=$ICON_CHROME
 	;;
 "Firefox" | "Firefox Developer Edition")
