@@ -18,16 +18,16 @@ hyper - k : yabai -m window --focus north
 hyper - l : yabai -m window --focus east
 
 # swap window
-meh - a : yabai -m window --swap west
-meh - s : yabai -m window --swap south
-meh - w : yabai -m window --swap north
-meh - d : yabai -m window --swap east
+# meh - a : yabai -m window --swap west
+# meh - s : yabai -m window --swap south
+# meh - w : yabai -m window --swap north
+# meh - d : yabai -m window --swap east
 
 # move window
-hyper - a : yabai -m window --warp west
-hyper - s : yabai -m window --warp south
-hyper - w : yabai -m window --warp north
-hyper - d : yabai -m window --warp east
+meh - a : yabai -m window --warp west
+meh - s : yabai -m window --warp south
+meh - w : yabai -m window --warp north
+meh - d : yabai -m window --warp east
 
 ## balance size of windows
 hyper - 0 : yabai -m space --balance
@@ -77,11 +77,11 @@ hyper - n : yabai -m space --focus next || yabai -m space --focus first
 hyper - f : yabai -m window --toggle zoom-fullscreen
 
 # Stack
-hyper - z : yabai -m window --stack prev
-hyper - x : yabai -m window --stack next
-hyper - q : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
-hyper - e : yabai -m window --focus stack.next || yabai -m window --focus stack.first
-hyper - c : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
+hyper - m : yabai -m window --stack prev
+f19 : yabai -m window --stack next
+hyper - u : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+hyper - o : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+f15 : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
 
 # Send window
 rshift - 1 : yabai -m window --space  1; yabai -m space --focus 1 || (yabai -m window --space  4; yabai -m space --focus 4)

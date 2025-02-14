@@ -29,7 +29,13 @@ yabai -m rule --add app="^System Settings$" scratchpad="System Settings"
 yabai -m rule --add app="^Obsidian$" scratchpad="Obsidian" sticky=on
 yabai -m rule --add app="^Reader$" scratchpad="Reader" sticky=on
 yabai -m rule --add app="^ChatGPT$" scratchpad="ChatGPT" sticky=on
+yabai -m rule --add app="^Claude$" scratchpad="Claude" sticky=on
 yabai -m rule --add app="^Ghostty$" sticky=on scratchpad="Ghostty"
+yabai -m rule --add app="^Google AI Studio$" sticky=on scratchpad="Google AI Studio"
+yabai -m rule --add app="^DeepSeek$" sticky=on scratchpad="DeepSeek"
+yabai -m rule --add app="^YouTube$" sticky=on scratchpad="YouTube"
+yabai -m rule --add app="^Reddit$" sticky=on scratchpad="Reddit"
+yabai -m rule --add app="^Hacker News$" sticky=on scratchpad="Hacker News"
 
 yabai -m rule --apply
 

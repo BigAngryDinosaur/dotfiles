@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.iceljdgfkkipenkibojdhfdbkbckmdah</string>
+		<key>Name</key>
+		<string>DeepSeek</string>
+		<key>NewFile</key>
+		<string>~/Applications/Chrome Canary Apps.localized/DeepSeek.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.mitchellh.ghostty</string>
 		<key>Name</key>
 		<string>Ghostty</string>
