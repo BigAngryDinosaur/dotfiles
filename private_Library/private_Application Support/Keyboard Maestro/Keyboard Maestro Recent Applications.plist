@@ -8,7 +8,15 @@
 		<key>Name</key>
 		<string>YouTube</string>
 		<key>NewFile</key>
-		<string>~/Applications/Chrome Canary Apps.localized/YouTube.app</string>
+		<string>/Applications/YouTube.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>si.filips.firefoxpwa.runtime</string>
+		<key>Name</key>
+		<string>Firefox</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/firefoxpwa/runtime/Firefox.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
