@@ -36,6 +36,7 @@ yabai -m rule --add app="^DeepSeek$" sticky=on scratchpad="DeepSeek"
 yabai -m rule --add app="^YouTube$" sticky=on scratchpad="YouTube"
 yabai -m rule --add app="^Reddit$" sticky=on scratchpad="Reddit"
 yabai -m rule --add app="^Hacker News$" sticky=on scratchpad="Hacker News"
+yabai -m rule --add app="^Perplexity$" sticky=on scratchpad="Perplexity"
 
 yabai -m rule --apply
 

@@ -12,14 +12,6 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>si.filips.firefoxpwa.runtime</string>
-		<key>Name</key>
-		<string>Firefox</string>
-		<key>NewFile</key>
-		<string>~/Library/Application Support/firefoxpwa/runtime/Firefox.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.mitchellh.ghostty</string>
 		<key>Name</key>
 		<string>Ghostty</string>
