@@ -58,10 +58,14 @@ update ()
     if [ "$ARTIST" == "" ]; then
       args+=(--set spotify.title label="$TRACK"
              --set spotify.album label="Podcast"
+             --set spotify.song_name label="$TRACK"
+             --set spotify.artist_name label="$ARTIST"
              --set spotify.artist label="$ALBUM"  )
     else
       args+=(--set spotify.title label="$TRACK"
              --set spotify.album label="$ALBUM"
+             --set spotify.song_name label="$TRACK"
+             --set spotify.artist_name label="$ARTIST"
              --set spotify.artist label="$ARTIST")
     fi
     args+=(--set spotify.play icon=􀊆
@@ -69,9 +73,13 @@ update ()
            --set spotify.repeat icon.highlight=$REPEAT
            --set spotify.cover background.image="/tmp/cover.jpg"
                                background.color=0x00000000
-           --set spotify.anchor drawing=on                      )
+           --set spotify.song_name drawing=on
+           --set spotify.artist_name drawing=on
+                                 )
   else
-    args+=(--set spotify.anchor drawing=off popup.drawing=off
+    args+=(--set spotify.anchor popup.drawing=off
+           --set spotify.song_name drawing=off
+           --set spotify.artist_name drawing=off
            --set spotify.play icon=􀊄                         )
   fi
   sketchybar -m "${args[@]}"

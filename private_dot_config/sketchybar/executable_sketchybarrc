@@ -51,6 +51,12 @@ default=(
   label.padding_right=8
   label.font="$FONT:Regular:12.0"
 )
+
+# Right side defaults (only show on display 1)
+right_display=(
+  associated_display=1
+)
+
 sketchybar --default "${default[@]}"
 
 
@@ -76,7 +82,6 @@ source "$ITEM_DIR/front_app.sh"
 # Spotify
 source "$ITEM_DIR/spotify.sh"
 
-
 #-------------------------------------
 
 
@@ -86,18 +91,28 @@ source "$ITEM_DIR/spotify.sh"
 
 # Clock
 source "$ITEM_DIR/clock.sh"
+sketchybar --set time "${right_display[@]}" \
+           --set date "${right_display[@]}"
 
 # Separator
 source "$ITEM_DIR/separator.sh" "separator.r1" "right" 4 4
+sketchybar --set separator.r1 "${right_display[@]}"
 
 # Status items (ip_address, volume, battery)
 source "$ITEM_DIR/status.sh"
+sketchybar --set ip_address "${right_display[@]}" \
+           --set volume "${right_display[@]}" \
+           --set battery "${right_display[@]}"
 
 # Separator
 source "$ITEM_DIR/separator.sh" "separator.r2" "right" 4 4
+sketchybar --set separator.r2 "${right_display[@]}"
 
 # Activity items (ram, disk, cpu)
 source "$ITEM_DIR/activity.sh"
+sketchybar --set ram "${right_display[@]}" \
+           --set disk "${right_display[@]}" \
+           --set cpu "${right_display[@]}"
 
 #-------------------------------------
 
@@ -106,3 +121,5 @@ source "$ITEM_DIR/activity.sh"
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
+
+sketchybar --hotload true
