@@ -20,6 +20,7 @@ spotify_anchor=(
   label.drawing=off
   padding_left=0
   padding_right=0
+  associated_display=1
 )
 
 spotify_artist_name=(
@@ -34,6 +35,7 @@ spotify_artist_name=(
   label.font="$FONT:Heavy:15.0"
   label.padding_left=10
   label.padding_right=10
+  associated_display=1
 )
 
 
@@ -49,12 +51,14 @@ spotify_song_name=(
   label.font="$FONT:Heavy:15.0"
   label.padding_left=10
   label.padding_right=10
+  associated_display=1
 )
 
 anchor_bracket=(
   background.height=30
   background.color=$COLOR_BACKGROUND
   background.border_width=0
+  associated_display=1
 )
 
 spotify_cover=(
