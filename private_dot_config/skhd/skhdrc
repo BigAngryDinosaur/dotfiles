@@ -112,3 +112,6 @@ rcmd - g : yabai -m window --toggle sticky
 # toggle 
 rcmd - 1 : if [ $(yabai -m query --windows  --window | jq  '.app') = '"Slack"' ]; then skhd -k "cmd - h"; $(yabai -m space --focus recent) ; else open /Applications/Slack.app; fi
 rcmd - 2 : if [ $(yabai -m query --windows  --window | jq  '.app') = '"Spotify"' ]; then skhd -k "cmd - h"; $(yabai -m space --focus recent) ; else open /Applications/Spotify.app; fi
+
+# fit_window
+rcmd - f : $HOME/.config/skhd/scripts/fit_window.sh

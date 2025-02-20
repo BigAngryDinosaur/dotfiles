@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.swift" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
