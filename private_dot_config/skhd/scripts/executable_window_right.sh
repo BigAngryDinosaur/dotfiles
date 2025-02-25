@@ -9,18 +9,6 @@ screen_height=$(echo "$screen_info" | jq -r '.h | floor')
 new_width=$((screen_width - 20))
 new_height=$((screen_height - 50))
 
-
-x=10
-y=40
-
-if [[ $1 == "left" ]] || [[ $1 == "right" ]]; then
-  new_width=$((new_width / 2))
-fi
-
-if [[ $1 == "right" ]]; then
-  x=$((x+new_width))
-fi
-
 # Move and resize the focused window
-yabai -m window --move abs:"$x":"$y"
+yabai -m window --move abs:10:40
 yabai -m window --resize abs:"$new_width":"$new_height"

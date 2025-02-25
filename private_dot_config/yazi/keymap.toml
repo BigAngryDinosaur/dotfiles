@@ -1,0 +1,8 @@
+[manager]
+prepend_keymap = []
+append_keymap = [
+  { on = [
+    "g",
+    "b",
+  ], run = 'cd "/Users/hrishikeshsawant/Google Drive/My Drive/Books"', desc = "Go to Books" },
+]

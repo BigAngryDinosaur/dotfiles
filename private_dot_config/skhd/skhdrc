@@ -115,3 +115,5 @@ rcmd - 2 : if [ $(yabai -m query --windows  --window | jq  '.app') = '"Spotify"'
 
 # fit_window
 rcmd - f : $HOME/.config/skhd/scripts/fit_window.sh
+rcmd - c : $HOME/.config/skhd/scripts/fit_window.sh "left"
+rcmd - v : $HOME/.config/skhd/scripts/fit_window.sh "right"
