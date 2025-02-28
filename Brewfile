@@ -78,6 +78,8 @@ brew "uv"
 brew "portaudio"
 brew "atuin"
 brew "sketchybar"
+brew "glow"
+brew "miller"
 
 cask "1password-cli"
 cask "betterdisplay"

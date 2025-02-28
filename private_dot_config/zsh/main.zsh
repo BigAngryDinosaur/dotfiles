@@ -36,5 +36,6 @@ source $CONFIG_PATH/tools/goenv.zsh
 source $CONFIG_PATH/tools/ghcup.zsh
 source $CONFIG_PATH/tools/nimble.zsh
 source $CONFIG_PATH/tools/atuin.zsh
+source $CONFIG_PATH/tools/uv.zsh
 
 
