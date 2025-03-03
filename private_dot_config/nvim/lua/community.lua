@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.mini-ai" },
+  { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.color.ccc-nvim" },
