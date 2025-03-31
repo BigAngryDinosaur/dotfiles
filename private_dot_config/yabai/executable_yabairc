@@ -15,8 +15,6 @@ yabai -m space 7
 yabai -m space 8
 
 # rules for apps
-yabai -m rule --add app="^Xcode$" display=1 space=1
-yabai -m rule --add app="^Simulator$" display=3 space=14 manage=off
 yabai -m rule --add app="^CleanShot X$" sticky=on manage=off opacity=1.0
 yabai -m rule --add app="^Kando$" manage=off opacity=1.0
 yabai -m rule --add app="^ForkLift$" manage=off opacity=1.0
@@ -24,8 +22,6 @@ yabai -m rule --add app="^ForkLift$" manage=off opacity=1.0
 yabai -m rule --add app="^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|Notes)$" manage=off opacity=1.0
 yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|Notes)$' action='window="$(yabai -m query --windows --window)"; display="$(/opt/homebrew/bin/yabai -m query --displays --window)"; coords="$(/opt/homebrew/bin/jq --argjson window "$window" --argjson display "$display" -nr "((\$display.frame | .x + .w / 2) - (\$window.frame.w / 2) | tostring) + \":\" + ((\$display.frame | .y + .h / 2) - (\$window.frame.h / 2) | tostring)")"; /opt/homebrew/bin/yabai -m window --move "abs:$coords"'
 
-yabai -m rule --add app="^Spotify$" display=3 space=13
-yabai -m rule --add app='^Slack$' display=2 space=10
 yabai -m rule --add app="^System Settings$" scratchpad="System Settings" 
 yabai -m rule --add app="^Obsidian$" scratchpad="Obsidian" sticky=on
 yabai -m rule --add app="^Reader$" scratchpad="Reader" sticky=on
