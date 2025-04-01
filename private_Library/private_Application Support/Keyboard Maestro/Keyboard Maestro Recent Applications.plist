@@ -12,6 +12,14 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
+		<string>org.mozilla.firefoxdeveloperedition</string>
+		<key>Name</key>
+		<string>Firefox Developer Edition</string>
+		<key>NewFile</key>
+		<string>/Applications/Firefox Developer Edition.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
 		<string>com.apple.finder</string>
 		<key>Name</key>
 		<string>Finder</string>
@@ -217,14 +225,6 @@
 		<string>Keyboard Maestro</string>
 		<key>NewFile</key>
 		<string>/Applications/Keyboard Maestro.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>org.mozilla.firefoxdeveloperedition</string>
-		<key>Name</key>
-		<string>Firefox Developer Edition</string>
-		<key>NewFile</key>
-		<string>/Applications/Firefox Developer Edition.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>

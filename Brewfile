@@ -80,6 +80,7 @@ brew "atuin"
 brew "sketchybar"
 brew "glow"
 brew "miller"
+brew "ollama"
 
 cask "1password-cli"
 cask "betterdisplay"

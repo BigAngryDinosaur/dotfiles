@@ -1,6 +1,4 @@
 
-ctrl + alt + cmd - r : yabai --restart-service
-
 # focus window
 hyper - h : yabai -m window --focus west
 hyper - j : yabai -m window --focus south
