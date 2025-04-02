@@ -1,1834 +1,1185 @@
 {
-    "profiles": [
-        {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "General",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "page_up" },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "modifiers": ["option", "control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "page_down" },
-                                "to": [
-                                    {
-                                        "key_code": "left_option",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "end" },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": ["command", "option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "keypad_equal_sign" },
-                                "to": [
-                                    {
-                                        "key_code": "open_bracket",
-                                        "modifiers": ["command", "option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "home" },
-                                "to": [
-                                    {
-                                        "key_code": "return_or_enter",
-                                        "modifiers": ["command", "option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["command", "option", "control", "shift"] }
-                                },
-                                "to": [{ "key_code": "f14" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": { "mandatory": ["command", "option", "control", "shift"] }
-                                },
-                                "to": [{ "key_code": "f15" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": { "mandatory": ["command", "option", "control", "shift"] }
-                                },
-                                "to": [{ "key_code": "f19" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "open -g raycast://confetti" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Double Tap right shift to opt+backslash",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-right_shift",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "right_shift" },
-                                "to": [
-                                    {
-                                        "key_code": "backslash",
-                                        "modifiers": ["left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-right_shift",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "right_shift" },
-                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "double-tap-right_shift",
-                                            "value": 1
-                                        }
-                                    },
-                                    { "key_code": "right_shift" }
-                                ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-right_shift",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        { "key_code": "right_shift" },
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-right_shift",
-                                                "value": 0
-                                            }
-                                        }
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Double Tap left shift to keypad4",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-left_shift",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "left_shift" },
-                                "to": [{ "key_code": "keypad_4" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-left_shift",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "left_shift" },
-                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "double-tap-left_shift",
-                                            "value": 1
-                                        }
-                                    },
-                                    { "key_code": "left_shift" }
-                                ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-left_shift",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        { "key_code": "left_shift" },
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-left_shift",
-                                                "value": 0
-                                            }
-                                        }
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Double Tap left shift to keypad5",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-left_command",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "left_command" },
-                                "to": [{ "key_code": "keypad_5" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "double-tap-left_command",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "left_command" },
-                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "double-tap-left_command",
-                                            "value": 1
-                                        }
-                                    },
-                                    { "key_code": "left_command" }
-                                ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-left_command",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        { "key_code": "left_command" },
-                                        {
-                                            "set_variable": {
-                                                "name": "double-tap-left_command",
-                                                "value": 0
-                                            }
-                                        }
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Kando",
-                        "manipulators": [
-                            {
-                                "from": { "pointing_button": "button4" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 },
-                                "to_if_alone": [{ "pointing_button": "button4" }],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "home",
-                                        "modifiers": ["right_shift", "right_command", "right_option", "right_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "DuoLayer l ;",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": { "optional": ["any"] },
-                                    "simultaneous": [
-                                        { "key_code": "l" },
-                                        { "key_code": "semicolon" }
-                                    ],
-                                    "simultaneous_options": {
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "duo-layer-l-;",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_notification_message": {
-                                                    "id": "duo-layer-duo-layer-l-;",
-                                                    "text": ""
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "duo-layer-l-;",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "duo-layer-duo-layer-l-;",
-                                            "text": "A | Slack\nS | Spotify\nX | Xcode\nV | Visual Studio Code\nC | Google Chrome Canary\nF | Firefox Developer Edition\nT | Sourcetree\nZ | System Settings"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "a" },
-                                "to": [{ "shell_command": "open -a \"Slack\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "s" },
-                                "to": [{ "shell_command": "open -a \"Spotify\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "x" },
-                                "to": [{ "shell_command": "open -a \"Xcode\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "v" },
-                                "to": [{ "shell_command": "open -a \"Visual Studio Code\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "c" },
-                                "to": [{ "shell_command": "open -a \"Google Chrome Canary\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "f" },
-                                "to": [{ "shell_command": "open -a \"Firefox Developer Edition\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "t" },
-                                "to": [{ "shell_command": "open -a \"Sourcetree\".app" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-l-;",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "z" },
-                                "to": [{ "shell_command": "open -a \"System Settings\".app" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "DuoLayer z x",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": { "optional": ["any"] },
-                                    "simultaneous": [
-                                        { "key_code": "z" },
-                                        { "key_code": "x" }
-                                    ],
-                                    "simultaneous_options": {
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "duo-layer-z-x",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_notification_message": {
-                                                    "id": "duo-layer-duo-layer-z-x",
-                                                    "text": ""
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "duo-layer-z-x",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "duo-layer-duo-layer-z-x",
-                                            "text": "b = '😂'\nc = '❤️'\nd = '🔥'\nf = '😊'\nh = '👍'\nj = '💔'\nm = '🎉'\nn = '🥰'\np = '👏'\nr = '✨'\ns = '🙏'\nt = '💯'\nu = '🤔'\nv = '😎'\no = '🙌'"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "b" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😂\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "c" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"❤️\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "d" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🔥\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "f" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😊\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "h" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👍\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "j" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💔\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "m" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🎉\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "n" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🥰\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "p" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"👏\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "r" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"✨\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "s" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🙏\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "t" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"💯\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "u" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🤔\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "v" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"😎\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "o" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🙌\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "i" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"🤩\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "2" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌫\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "3" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌦\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "4" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⇥\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "5" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⎋\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "6" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌘\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "7" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌥\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "8" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌃\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "9" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⇧\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "0" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⇪\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "comma" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"‹\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "period" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"›\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "left_arrow" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"←\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "right_arrow" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"→\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "up_arrow" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"↑\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "down_arrow" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"↓\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "spacebar" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"␣\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "return_or_enter" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⏎\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "delete_or_backspace" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌫\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-z-x",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "delete_forward" },
-                                "to": [{ "shell_command": "osascript -e '\nset prev to the clipboard\nset the clipboard to \"⌦\"\ntell application \"System Events\"\n  keystroke \"v\" using command down\n  delay 0.1\nend tell\nset the clipboard to prev'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "DuoLayer . /",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "modifiers": { "optional": ["any"] },
-                                    "simultaneous": [
-                                        { "key_code": "period" },
-                                        { "key_code": "slash" }
-                                    ],
-                                    "simultaneous_options": {
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "duo-layer-.-/",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_notification_message": {
-                                                    "id": "duo-layer-duo-layer-.-/",
-                                                    "text": ""
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 200 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "duo-layer-.-/",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "duo-layer-duo-layer-.-/",
-                                            "text": "g = 'https://github.com'\ny = 'https://www.youtube.com'\nh = 'https://news.ycombinator.com'\nr = 'https://old.reddit.com'\nu = 'https://www.ubereats.com'\nw = 'https://www.wolt.com'"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "g" },
-                                "to": [{ "shell_command": "open \"https://github.com\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "y" },
-                                "to": [{ "shell_command": "open \"https://www.youtube.com\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "h" },
-                                "to": [{ "shell_command": "open \"https://news.ycombinator.com\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "r" },
-                                "to": [{ "shell_command": "open \"https://old.reddit.com\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "u" },
-                                "to": [{ "shell_command": "open \"https://www.ubereats.com\"" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "duo-layer-.-/",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": { "key_code": "w" },
-                                "to": [{ "shell_command": "open \"https://www.wolt.com\"" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "XCode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["command", "control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["command", "control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "j",
-                                        "modifiers": ["command", "control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "b",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "b",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "z",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "backslash",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.apple.dt.Xcode$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Xcode action group\"'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "VSCode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"VSCode: Go To Definition\"'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.microsoft.VSCode(?:Insiders)?$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "key_code": "f5" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Zed",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Zed: Go To Definition\"'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^dev.zed.Zed$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "key_code": "f5" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Cursor",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": ["command", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Cursor: Go To Definition\"'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "b",
-                                        "modifiers": ["command", "option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.todesktop.230313mzl4w4u92$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "key_code": "f5" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Chrome",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com.google.Chrome.*$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["right_shift"] }
-                                },
-                                "to": [{ "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Chrome action group\"'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    }
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "General",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f13"
+                },
+                "to": [
+                  {
+                    "key_code": "a",
+                    "modifiers": [
+                      "control"
+                    ]
+                  }
                 ]
-            },
-            "devices": [
-                {
-                    "identifiers": { "is_keyboard": true },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f14"
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "option"
                     ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 45915,
-                        "vendor_id": 1133
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f14",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
                     ]
+                  }
                 },
-                {
-                    "identifiers": {
-                        "device_address": "c1-47-fc-6e-1d-40",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
-                        }
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "option",
+                      "shift"
                     ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 12885,
-                        "vendor_id": 6645
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
-                        }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f14",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
                     ]
+                  }
                 },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 12885,
-                        "vendor_id": 6645
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
-                        }
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "option"
                     ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f15"
                 },
-                {
-                    "identifiers": {
-                        "device_address": "c1-47-fc-6e-1a-50",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 45091,
-                        "vendor_id": 1133
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 50475,
-                        "vendor_id": 1133
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 12871,
-                        "vendor_id": 6645
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 12871,
-                        "vendor_id": 6645
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
-                        }
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "option"
                     ]
-                },
-                {
-                    "identifiers": {
-                        "device_address": "c1-47-fc-6e-1a-51",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "device_address": "c1-47-fc-6e-54-20",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 6519,
-                        "vendor_id": 12951
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 6519,
-                        "vendor_id": 12951
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "right_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "right_control" }]
-                        }
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f15",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
                     ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "option",
+                      "shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f15",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f16"
+                },
+                "to": [
+                  {
+                    "key_code": "e",
+                    "modifiers": [
+                      "control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Double Tap right shift to opt+backslash",
+            "manipulators": [
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-right_shift",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "right_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "backslash",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-right_shift",
+                    "type": "variable_unless",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "right_shift"
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double-tap-right_shift",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "right_shift"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double-tap-right_shift",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "key_code": "right_shift"
+                    },
+                    {
+                      "set_variable": {
+                        "name": "double-tap-right_shift",
+                        "value": 0
+                      }
+                    }
+                  ]
                 }
-            ],
-            "name": "Default",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+              }
+            ]
+          },
+          {
+            "description": "Double Tap left shift to keypad4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_shift",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "keypad_4"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_shift",
+                    "type": "variable_unless",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double-tap-left_shift",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_shift",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "key_code": "left_shift"
+                    },
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_shift",
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "description": "Double Tap left shift to keypad5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_command",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_command"
+                },
+                "to": [
+                  {
+                    "key_code": "keypad_5"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "double-tap-left_command",
+                    "type": "variable_unless",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_command"
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double-tap-left_command",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "left_command"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_command",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "key_code": "left_command"
+                    },
+                    {
+                      "set_variable": {
+                        "name": "double-tap-left_command",
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "description": "Kando",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "pointing_button": "button4"
+                },
+                "to_if_alone": [
+                  {
+                    "pointing_button": "button4"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "home",
+                    "modifiers": [
+                      "right_shift",
+                      "right_command",
+                      "right_option",
+                      "right_control"
+                    ],
+                    "halt": true
+                  }
+                ],
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 200
+                }
+              }
+            ]
+          },
+          {
+            "description": "XCode",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "command",
+                      "control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "command",
+                      "control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "o",
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers": [
+                      "command",
+                      "control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "b",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "z",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Xcode action group\"'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.apple.dt.Xcode$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "VSCode",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "control",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"VSCode: Go To Definition\"'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f5"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode(?:Insiders)?$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Chrome",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Chrome action group\"'"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.google.Chrome.*$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 1000,
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "basic.to_delayed_action_delay_milliseconds": 500,
+          "basic.simultaneous_threshold_milliseconds": 50,
+          "mouse_motion_to_scroll.speed": 100
         }
-    ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 45915,
+            "vendor_id": 1133
+          },
+          "ignore": false,
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "device_address": "c1-47-fc-6e-1d-40",
+            "is_keyboard": true,
+            "is_pointing_device": true
+          },
+          "ignore": false,
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 12885,
+            "vendor_id": 6645
+          },
+          "ignore": false,
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 12885,
+            "vendor_id": 6645
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "device_address": "c1-47-fc-6e-1a-50",
+            "is_keyboard": true,
+            "is_pointing_device": true
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 45091,
+            "vendor_id": 1133
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 50475,
+            "vendor_id": 1133
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 12871,
+            "vendor_id": 6645
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 12871,
+            "vendor_id": 6645
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "device_address": "c1-47-fc-6e-1a-51",
+            "is_keyboard": true,
+            "is_pointing_device": true
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "device_address": "c1-47-fc-6e-54-20",
+            "is_keyboard": true,
+            "is_pointing_device": true
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 6519,
+            "vendor_id": 12951
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 6519,
+            "vendor_id": 12951
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_control"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_command"
+              },
+              "to": [
+                {
+                  "key_code": "right_control"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "Default",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
 }
