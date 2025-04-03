@@ -1,0 +1,10 @@
+#/bin/env sh
+
+cd ~/code/rust/ai_rewrite
+TEXT=$(./target/debug/ai_rewrite "$1")
+
+osascript <<EOF
+tell application "System Events"
+    keystroke "$TEXT"
+end tell
+EOF

@@ -1,8 +1,8 @@
 macos-non-native-fullscreen = true
 window-padding-x = 10
-#keybind = global:opt+\=toggle_quick_terminal
-#keybind = global:opt+\=toggle_visibility
-quick-terminal-position = bottom
-quick-terminal-autohide = false
-quick-terminal-screen = macos-menu-bar
 initial-window = true
+
+macos-option-as-alt = true
+
+keybind = alt+left=unbind
+keybind = alt+right=unbind

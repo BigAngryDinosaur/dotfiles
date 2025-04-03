@@ -81,6 +81,7 @@ brew "sketchybar"
 brew "glow"
 brew "miller"
 brew "ollama"
+brew "zellij"
 
 cask "1password-cli"
 cask "betterdisplay"
