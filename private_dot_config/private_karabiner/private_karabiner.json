@@ -169,7 +169,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "~/.config/karabiner/scripts/ai_rewrite professional"
+                    "shell_command": "~/.config/karabiner/scri;ts/ai_rewrite professional"
                   }
                 ]
               },
@@ -190,222 +190,42 @@
                     "shell_command": "~/.config/karabiner/scripts/ai_rewrite \"custom: rewrite the provided text in pirate lingo.\""
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "description": "Double Tap right shift to opt+backslash",
-            "manipulators": [
+              },
               {
                 "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-right_shift",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
                 "from": {
-                  "key_code": "right_shift"
-                },
-                "to": [
-                  {
-                    "key_code": "backslash",
-                    "modifiers": [
-                      "left_option"
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
                     ]
                   }
-                ]
-              },
-              {
-                "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-right_shift",
-                    "type": "variable_unless",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "right_shift"
-                },
-                "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 200
                 },
                 "to": [
                   {
-                    "set_variable": {
-                      "name": "double-tap-right_shift",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "right_shift"
-                  }
-                ],
-                "to_delayed_action": {
-                  "to_if_canceled": [
-                    {
-                      "set_variable": {
-                        "name": "double-tap-right_shift",
-                        "value": 0
-                      }
-                    }
-                  ],
-                  "to_if_invoked": [
-                    {
-                      "key_code": "right_shift"
-                    },
-                    {
-                      "set_variable": {
-                        "name": "double-tap-right_shift",
-                        "value": 0
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "description": "Double Tap left shift to keypad4",
-            "manipulators": [
-              {
-                "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-left_shift",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "left_shift"
-                },
-                "to": [
-                  {
-                    "key_code": "keypad_4"
+                    "shell_command": "open -n /Applications/Ghostty.app"
                   }
                 ]
               },
               {
                 "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-left_shift",
-                    "type": "variable_unless",
-                    "value": 1
-                  }
-                ],
                 "from": {
-                  "key_code": "left_shift"
-                },
-                "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 200
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
                 },
                 "to": [
                   {
-                    "set_variable": {
-                      "name": "double-tap-left_shift",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "left_shift"
-                  }
-                ],
-                "to_delayed_action": {
-                  "to_if_canceled": [
-                    {
-                      "set_variable": {
-                        "name": "double-tap-left_shift",
-                        "value": 0
-                      }
-                    }
-                  ],
-                  "to_if_invoked": [
-                    {
-                      "key_code": "left_shift"
-                    },
-                    {
-                      "set_variable": {
-                        "name": "double-tap-left_shift",
-                        "value": 0
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "description": "Double Tap left shift to keypad5",
-            "manipulators": [
-              {
-                "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-left_command",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "left_command"
-                },
-                "to": [
-                  {
-                    "key_code": "keypad_5"
+                    "shell_command": "open -n /Applications/Ghostty.app --args --command='/opt/homebrew/bin/yazi'"
                   }
                 ]
-              },
-              {
-                "type": "basic",
-                "conditions": [
-                  {
-                    "name": "double-tap-left_command",
-                    "type": "variable_unless",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "left_command"
-                },
-                "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 200
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "double-tap-left_command",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "left_command"
-                  }
-                ],
-                "to_delayed_action": {
-                  "to_if_canceled": [
-                    {
-                      "set_variable": {
-                        "name": "double-tap-left_command",
-                        "value": 0
-                      }
-                    }
-                  ],
-                  "to_if_invoked": [
-                    {
-                      "key_code": "left_command"
-                    },
-                    {
-                      "set_variable": {
-                        "name": "double-tap-left_command",
-                        "value": 0
-                      }
-                    }
-                  ]
-                }
               }
             ]
           },

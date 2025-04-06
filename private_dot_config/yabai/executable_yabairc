@@ -22,18 +22,12 @@ yabai -m rule --add app="^ForkLift$" manage=off opacity=1.0
 yabai -m rule --add app="^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|Notes)$" manage=off opacity=1.0
 yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^(Keyboard Maestro|Dropover|Alfred Preferences|Karabiner-Elements|Karabiner-EventViewer|VLC|Steam|App Store|Activity Monitor|Disk Utility|Archive Utility|Finder|Raycast|1Password|Notes)$' action='window="$(yabai -m query --windows --window)"; display="$(/opt/homebrew/bin/yabai -m query --displays --window)"; coords="$(/opt/homebrew/bin/jq --argjson window "$window" --argjson display "$display" -nr "((\$display.frame | .x + .w / 2) - (\$window.frame.w / 2) | tostring) + \":\" + ((\$display.frame | .y + .h / 2) - (\$window.frame.h / 2) | tostring)")"; /opt/homebrew/bin/yabai -m window --move "abs:$coords"'
 
-yabai -m rule --add app="^System Settings$" scratchpad="System Settings" 
-yabai -m rule --add app="^Obsidian$" scratchpad="Obsidian" sticky=on
-yabai -m rule --add app="^Reader$" scratchpad="Reader" sticky=on
-yabai -m rule --add app="^ChatGPT$" scratchpad="ChatGPT" sticky=on
-yabai -m rule --add app="^Claude$" scratchpad="Claude" sticky=on
-yabai -m rule --add app="^Ghostty$" sticky=on scratchpad="Ghostty"
-yabai -m rule --add app="^Google AI Studio$" sticky=on scratchpad="Google AI Studio"
-yabai -m rule --add app="^DeepSeek$" sticky=on scratchpad="DeepSeek"
-yabai -m rule --add app="^YouTube$" sticky=on scratchpad="YouTube"
-yabai -m rule --add app="^Reddit$" sticky=on scratchpad="Reddit"
-yabai -m rule --add app="^Hacker News$" sticky=on scratchpad="Hacker News"
-yabai -m rule --add app="^Perplexity$" sticky=on scratchpad="Perplexity"
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Obsidian$" manage=off
+yabai -m rule --add app="^Reader$" manage=off
+yabai -m rule --add app="^ChatGPT$" manage=off 
+yabai -m rule --add app="^Claude$" manage=off 
+yabai -m rule --add app="^Google AI Studio$" manage=off
 
 yabai -m rule --apply
 

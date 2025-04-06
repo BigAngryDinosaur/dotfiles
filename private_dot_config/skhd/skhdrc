@@ -5,11 +5,17 @@ hyper - j : yabai -m window --focus south
 hyper - k : yabai -m window --focus north
 hyper - l : yabai -m window --focus east
 
+cmd + ctrl + alt - 0x29 : yabai -m window --focus recent
+
+
 # move window
 cmd + shift + alt - z : yabai -m window --warp west
 cmd + shift + alt - x : yabai -m window --warp south
 cmd + shift + alt - c : yabai -m window --warp north
 cmd + shift + alt - v : yabai -m window --warp east
+
+# fullscreen
+hyper - f : yabai -m window --toggle zoom-parent
 
 ## balance size of windows
 hyper - 0 : yabai -m space --balance
@@ -55,6 +61,10 @@ cmd + shift + alt - q: yabai -m window --resize left:-50:0 || yabai -m window --
 cmd + shift + alt - r: yabai -m window --resize right:50:0 || yabai -m window --resize left:50:0
 cmd + shift + alt - e: yabai -m window --resize bottom:0:20 || yabai -m window --resize top:0:20
 cmd + shift + alt - w: yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:0:-20
+
+# float
+cmd + shift + alt - g : yabai -m window --toggle float
+cmd + shift + alt - t : yabai -m window --toggle sticky
 
 # fit_window
 cmd + shift + alt - d : $HOME/.config/skhd/scripts/fit_window.sh

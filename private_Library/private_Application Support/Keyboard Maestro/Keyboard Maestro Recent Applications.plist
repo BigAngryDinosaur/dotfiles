@@ -4,38 +4,6 @@
 <array>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>org.pqrs.Karabiner-EventViewer</string>
-		<key>Name</key>
-		<string>Karabiner-EventViewer</string>
-		<key>NewFile</key>
-		<string>/Applications/Karabiner-EventViewer.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>org.mozilla.firefoxdeveloperedition</string>
-		<key>Name</key>
-		<string>Firefox Developer Edition</string>
-		<key>NewFile</key>
-		<string>/Applications/Firefox Developer Edition.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.finder</string>
-		<key>Name</key>
-		<string>Finder</string>
-		<key>NewFile</key>
-		<string>/System/Library/CoreServices/Finder.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.tinyspeck.slackmacgap</string>
-		<key>Name</key>
-		<string>Slack</string>
-		<key>NewFile</key>
-		<string>/Applications/Slack.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
 		<string>com.mitchellh.ghostty</string>
 		<key>Name</key>
 		<string>Ghostty</string>
@@ -52,219 +20,19 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.google.Chrome</string>
+		<string>org.pqrs.Karabiner-EventViewer</string>
 		<key>Name</key>
-		<string>Google Chrome</string>
+		<string>Karabiner-EventViewer</string>
 		<key>NewFile</key>
-		<string>/Applications/Google Chrome.app</string>
+		<string>/Applications/Karabiner-EventViewer.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.systempreferences</string>
+		<string>org.mozilla.firefoxdeveloperedition</string>
 		<key>Name</key>
-		<string>System Settings</string>
+		<string>Firefox Developer Edition</string>
 		<key>NewFile</key>
-		<string>/System/Applications/System Settings.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.iphonesimulator</string>
-		<key>Name</key>
-		<string>Simulator</string>
-		<key>NewFile</key>
-		<string>/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.anthropic.claudefordesktop</string>
-		<key>Name</key>
-		<string>Claude</string>
-		<key>NewFile</key>
-		<string>/Applications/Claude.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.openai.chat</string>
-		<key>Name</key>
-		<string>ChatGPT</string>
-		<key>NewFile</key>
-		<string>/Applications/ChatGPT.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.Preview</string>
-		<key>Name</key>
-		<string>Preview</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Preview.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>md.obsidian</string>
-		<key>Name</key>
-		<string>Obsidian</string>
-		<key>NewFile</key>
-		<string>/Applications/Obsidian.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>io.readwise.read</string>
-		<key>Name</key>
-		<string>Reader</string>
-		<key>NewFile</key>
-		<string>/Applications/Reader.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.spotify.client</string>
-		<key>Name</key>
-		<string>Spotify</string>
-		<key>NewFile</key>
-		<string>/Applications/Spotify.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.superduper.superwhisper</string>
-		<key>Name</key>
-		<string>superwhisper</string>
-		<key>NewFile</key>
-		<string>/Applications/superwhisper.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.xk72.Charles</string>
-		<key>Name</key>
-		<string>Charles</string>
-		<key>NewFile</key>
-		<string>/Applications/Charles.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.dt.Xcode</string>
-		<key>Name</key>
-		<string>Xcode</string>
-		<key>NewFile</key>
-		<string>/Applications/Xcode.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.1password.1password</string>
-		<key>Name</key>
-		<string>1Password</string>
-		<key>NewFile</key>
-		<string>/Applications/1Password.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.mail</string>
-		<key>Name</key>
-		<string>Mail</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Mail.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>app.zen-browser.zen</string>
-		<key>Name</key>
-		<string>Zen</string>
-		<key>NewFile</key>
-		<string>/Applications/Zen.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.electron.dockerdesktop</string>
-		<key>Name</key>
-		<string>Docker Desktop</string>
-		<key>NewFile</key>
-		<string>/Applications/Docker.app/Contents/MacOS/Docker Desktop.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.app.jhoednemeccjfpfbdpfeplmgfbehekfk</string>
-		<key>Name</key>
-		<string>Perplexity</string>
-		<key>NewFile</key>
-		<string>/Applications/Perplexity.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.github.CopilotForXcode.ExtensionService</string>
-		<key>Name</key>
-		<string>GitHub Copilot for Xcode Extension</string>
-		<key>NewFile</key>
-		<string>/Applications/GitHub Copilot for Xcode.app/Contents/Applications/GitHub Copilot for Xcode Extension.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.github.CopilotForXcode</string>
-		<key>Name</key>
-		<string>GitHub Copilot for Xcode</string>
-		<key>NewFile</key>
-		<string>/Applications/GitHub Copilot for Xcode.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.QuickTimePlayerX</string>
-		<key>Name</key>
-		<string>QuickTime Player</string>
-		<key>NewFile</key>
-		<string>/System/Applications/QuickTime Player.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>org.python.python</string>
-		<key>Name</key>
-		<string>Python</string>
-		<key>NewFile</key>
-		<string>/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/Resources/Python.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.stairways.keyboardmaestro.editor</string>
-		<key>Name</key>
-		<string>Keyboard Maestro</string>
-		<key>NewFile</key>
-		<string>/Applications/Keyboard Maestro.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.microsoft.VSCodeInsiders</string>
-		<key>Name</key>
-		<string>Visual Studio Code - Insiders</string>
-		<key>NewFile</key>
-		<string>/Applications/Visual Studio Code - Insiders.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.archiveutility</string>
-		<key>Name</key>
-		<string>Archive Utility</string>
-		<key>NewFile</key>
-		<string>/System/Library/CoreServices/Applications/Archive Utility.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.googlecode.iterm2</string>
-		<key>Name</key>
-		<string>iTerm</string>
-		<key>NewFile</key>
-		<string>/Applications/iTerm.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.exafunction.windsurf</string>
-		<key>Name</key>
-		<string>Windsurf</string>
-		<key>NewFile</key>
-		<string>/Applications/Windsurf.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.todesktop.230313mzl4w4u92</string>
-		<key>Name</key>
-		<string>Cursor</string>
-		<key>NewFile</key>
-		<string>/Applications/Cursor.app</string>
+		<string>/Applications/Firefox Developer Edition.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -276,211 +44,19 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>org.chromium.Chromium</string>
+		<string>com.stairways.keyboardmaestro.editor</string>
 		<key>Name</key>
-		<string>Chromium</string>
+		<string>Keyboard Maestro</string>
 		<key>NewFile</key>
-		<string>~/Library/Caches/ms-playwright/chromium-1155/chrome-mac/Chromium.app</string>
+		<string>/Applications/Keyboard Maestro.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>org.chromium.Chromium</string>
+		<string>app.zen-browser.zen</string>
 		<key>Name</key>
-		<string>Chromium</string>
+		<string>Zen Browser</string>
 		<key>NewFile</key>
-		<string>~/Library/Caches/ms-playwright/chromium-1148/chrome-mac/Chromium.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.mojogeknlbnppmajemmkcfkilgaapppk</string>
-		<key>Name</key>
-		<string>Google AI Studio</string>
-		<key>NewFile</key>
-		<string>/Applications/Google AI Studio.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.jmegojkfjlgeoegoddigbkcbpdmbdico</string>
-		<key>Name</key>
-		<string>DeepSeek</string>
-		<key>NewFile</key>
-		<string>/Applications/DeepSeek.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.pvncher.repoprompt</string>
-		<key>Name</key>
-		<string>Repo Prompt</string>
-		<key>NewFile</key>
-		<string>/Applications/Repo Prompt.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.cocinacogklpjoldpckjijokfbpfbccm</string>
-		<key>Name</key>
-		<string>Hacker News</string>
-		<key>NewFile</key>
-		<string>/Applications/Hacker News.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.ijilokociahmgkabncheancfofnbiopc</string>
-		<key>Name</key>
-		<string>Reddit</string>
-		<key>NewFile</key>
-		<string>/Applications/Reddit.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.Chrome.canary.app.agimnkijcaahngcdmfeangaknmldooml</string>
-		<key>Name</key>
-		<string>YouTube</string>
-		<key>NewFile</key>
-		<string>/Applications/YouTube.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.AppStore</string>
-		<key>Name</key>
-		<string>App Store</string>
-		<key>NewFile</key>
-		<string>/System/Applications/App Store.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.findmy</string>
-		<key>Name</key>
-		<string>Find My</string>
-		<key>NewFile</key>
-		<string>/System/Applications/FindMy.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>si.filips.firefoxpwa.runtime</string>
-		<key>Name</key>
-		<string>Firefox</string>
-		<key>NewFile</key>
-		<string>~/Library/Application Support/firefoxpwa/runtime/Firefox.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.Safari</string>
-		<key>Name</key>
-		<string>Safari</string>
-		<key>NewFile</key>
-		<string>/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.SystemProfiler</string>
-		<key>Name</key>
-		<string>System Information</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Utilities/System Information.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.TextEdit</string>
-		<key>Name</key>
-		<string>TextEdit</string>
-		<key>NewFile</key>
-		<string>/System/Applications/TextEdit.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.FontBook</string>
-		<key>Name</key>
-		<string>Font Book</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Font Book.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.ActivityMonitor</string>
-		<key>Name</key>
-		<string>Activity Monitor</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Utilities/Activity Monitor.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.TestFlight</string>
-		<key>Name</key>
-		<string>TestFlight</string>
-		<key>NewFile</key>
-		<string>/Applications/TestFlight.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.microsoft.VSCode</string>
-		<key>Name</key>
-		<string>Visual Studio Code</string>
-		<key>NewFile</key>
-		<string>/Applications/Visual Studio Code.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.GenerativePlaygroundApp</string>
-		<key>Name</key>
-		<string>Image Playground</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Image Playground.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>dev.zed.Zed</string>
-		<key>Name</key>
-		<string>Zed</string>
-		<key>NewFile</key>
-		<string>/Applications/Zed.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.installer</string>
-		<key>Name</key>
-		<string>Installer</string>
-		<key>NewFile</key>
-		<string>/System/Library/CoreServices/Installer.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.helpviewer</string>
-		<key>Name</key>
-		<string>Tips</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Tips.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.google.drivefs</string>
-		<key>Name</key>
-		<string>Google Drive</string>
-		<key>NewFile</key>
-		<string>/Applications/Google Drive.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.torusknot.SourceTreeNotMAS</string>
-		<key>Name</key>
-		<string>Sourcetree</string>
-		<key>NewFile</key>
-		<string>/Applications/Sourcetree.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.amazonaws.acvc.osx</string>
-		<key>Name</key>
-		<string>AWS VPN Client</string>
-		<key>NewFile</key>
-		<string>/Applications/AWS VPN Client/AWS VPN Client.app</string>
-	</dict>
-	<dict>
-		<key>BundleIdentifier</key>
-		<string>com.apple.Notes</string>
-		<key>Name</key>
-		<string>Notes</string>
-		<key>NewFile</key>
-		<string>/System/Applications/Notes.app</string>
+		<string>/Applications/Zen Browser.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -492,19 +68,51 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>fm.qmk.toolbox</string>
+		<string>com.microsoft.VSCode</string>
 		<key>Name</key>
-		<string>QMK Toolbox</string>
+		<string>Visual Studio Code</string>
 		<key>NewFile</key>
-		<string>/Applications/QMK Toolbox.app</string>
+		<string>/Applications/Visual Studio Code.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.runningwithcrayons.Alfred-Preferences</string>
+		<string>com.openai.chat</string>
 		<key>Name</key>
-		<string>Alfred Preferences</string>
+		<string>ChatGPT</string>
 		<key>NewFile</key>
-		<string>/Applications/Alfred 5.app/Contents/Preferences/Alfred Preferences.app</string>
+		<string>/Applications/ChatGPT.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.anthropic.claudefordesktop</string>
+		<key>Name</key>
+		<string>Claude</string>
+		<key>NewFile</key>
+		<string>/Applications/Claude.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.1password.1password</string>
+		<key>Name</key>
+		<string>1Password</string>
+		<key>NewFile</key>
+		<string>/Applications/1Password.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.superduper.superwhisper</string>
+		<key>Name</key>
+		<string>superwhisper</string>
+		<key>NewFile</key>
+		<string>/Applications/superwhisper.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.finder</string>
+		<key>Name</key>
+		<string>Finder</string>
+		<key>NewFile</key>
+		<string>/System/Library/CoreServices/Finder.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -516,43 +124,287 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.BluetoothFileExchange</string>
+		<string>com.spotify.client</string>
 		<key>Name</key>
-		<string>Bluetooth File Exchange</string>
+		<string>Spotify</string>
 		<key>NewFile</key>
-		<string>/System/Applications/Utilities/Bluetooth File Exchange.app</string>
+		<string>/Applications/Spotify.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.Dictionary</string>
+		<string>com.rstudio.desktop</string>
 		<key>Name</key>
-		<string>Dictionary</string>
+		<string>RStudio</string>
 		<key>NewFile</key>
-		<string>/System/Applications/Dictionary.app</string>
+		<string>/Applications/RStudio.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.calculator</string>
+		<string>com.adobe.Acrobat.Pro</string>
 		<key>Name</key>
-		<string>Calculator</string>
+		<string>Adobe Acrobat</string>
 		<key>NewFile</key>
-		<string>/System/Applications/Calculator.app</string>
+		<string>/Applications/Adobe Acrobat DC/Adobe Acrobat.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.Music</string>
+		<string>md.obsidian</string>
 		<key>Name</key>
-		<string>Music</string>
+		<string>Obsidian</string>
 		<key>NewFile</key>
-		<string>/System/Applications/Music.app</string>
+		<string>/Applications/Obsidian.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.AccessibilityInspector</string>
+		<string>com.binarynights.ForkLift</string>
 		<key>Name</key>
-		<string>Accessibility Inspector</string>
+		<string>ForkLift</string>
 		<key>NewFile</key>
-		<string>/Applications/Xcode.app/Contents/Applications/Accessibility Inspector.app</string>
+		<string>/Applications/ForkLift.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.systempreferences</string>
+		<key>Name</key>
+		<string>System Settings</string>
+		<key>NewFile</key>
+		<string>/System/Applications/System Settings.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.DiskUtility</string>
+		<key>Name</key>
+		<string>Disk Utility</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Disk Utility.app</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>rsession-arm64</string>
+		<key>NewFile</key>
+		<string>/Applications/RStudio.app/Contents/Resources/app/bin/rsession-arm64</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>io.readwise.read</string>
+		<key>Name</key>
+		<string>Reader</string>
+		<key>NewFile</key>
+		<string>/Applications/Reader.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.microsoft.VSCodeInsiders</string>
+		<key>Name</key>
+		<string>Visual Studio Code - Insiders</string>
+		<key>NewFile</key>
+		<string>/Applications/Visual Studio Code - Insiders.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.hnc.Discord</string>
+		<key>Name</key>
+		<string>Discord</string>
+		<key>NewFile</key>
+		<string>/Applications/Discord.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.mojogeknlbnppmajemmkcfkilgaapppk</string>
+		<key>Name</key>
+		<string>Google AI Studio</string>
+		<key>NewFile</key>
+		<string>/Applications/Google AI Studio.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.iBooksX</string>
+		<key>Name</key>
+		<string>Books</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Books.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.smartcodeltd.stremio</string>
+		<key>Name</key>
+		<string>Stremio</string>
+		<key>NewFile</key>
+		<string>/Applications/Stremio.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>fm.qmk.toolbox</string>
+		<key>Name</key>
+		<string>QMK Toolbox</string>
+		<key>NewFile</key>
+		<string>/Applications/QMK Toolbox.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>dev.zed.Zed</string>
+		<key>Name</key>
+		<string>Zed</string>
+		<key>NewFile</key>
+		<string>/Applications/Zed.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.valvesoftware.steam</string>
+		<key>Name</key>
+		<string>Steam</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/Steam.AppBundle/Steam</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.iceljdgfkkipenkibojdhfdbkbckmdah</string>
+		<key>Name</key>
+		<string>DeepSeek</string>
+		<key>NewFile</key>
+		<string>/Applications/DeepSeek.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.valvesoftware.steam</string>
+		<key>Name</key>
+		<string>Steam</string>
+		<key>NewFile</key>
+		<string>/Applications/Steam.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.TextEdit</string>
+		<key>Name</key>
+		<string>TextEdit</string>
+		<key>NewFile</key>
+		<string>/System/Applications/TextEdit.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.kjgkcddpdhaknapkggbamldjpadnccmf</string>
+		<key>Name</key>
+		<string>Perplexity</string>
+		<key>NewFile</key>
+		<string>/Applications/Perplexity.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Preview</string>
+		<key>Name</key>
+		<string>Preview</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Preview.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.godotengine.godot</string>
+		<key>Name</key>
+		<string>Godot</string>
+		<key>NewFile</key>
+		<string>/Applications/Godot.app</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>python3</string>
+		<key>NewFile</key>
+		<string>~/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/bin/python3.12</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.todesktop.230313mzl4w4u92</string>
+		<key>Name</key>
+		<string>Cursor</string>
+		<key>NewFile</key>
+		<string>/Applications/Cursor.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.archiveutility</string>
+		<key>Name</key>
+		<string>Archive Utility</string>
+		<key>NewFile</key>
+		<string>/System/Library/CoreServices/Applications/Archive Utility.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.iCal</string>
+		<key>Name</key>
+		<string>Calendar</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Calendar.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.electron.dockerdesktop</string>
+		<key>Name</key>
+		<string>Docker Desktop</string>
+		<key>NewFile</key>
+		<string>/Applications/Docker.app/Contents/MacOS/Docker Desktop.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.docker.docker</string>
+		<key>Name</key>
+		<string>Docker</string>
+		<key>NewFile</key>
+		<string>/Applications/Docker.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.chromium.Chromium</string>
+		<key>Name</key>
+		<string>Chromium</string>
+		<key>NewFile</key>
+		<string>~/Library/Caches/ms-playwright/chromium-1155/chrome-mac/Chromium.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.cocinacogklpjoldpckjijokfbpfbccm</string>
+		<key>Name</key>
+		<string>Hacker News</string>
+		<key>NewFile</key>
+		<string>/Applications/Hacker News.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.agimnkijcaahngcdmfeangaknmldooml</string>
+		<key>Name</key>
+		<string>YouTube</string>
+		<key>NewFile</key>
+		<string>/Applications/YouTube.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome.canary.app.blnbcjfakmmiijbpojpaebkiechlnnhe</string>
+		<key>Name</key>
+		<string>Reddit</string>
+		<key>NewFile</key>
+		<string>/Applications/Reddit.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Console</string>
+		<key>Name</key>
+		<string>Console</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Console.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Notes</string>
+		<key>Name</key>
+		<string>Notes</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Notes.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.FontBook</string>
+		<key>Name</key>
+		<string>Font Book</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Font Book.app</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -564,11 +416,341 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.DiskUtility</string>
+		<string>com.adobe.acc.AdobeCreativeCloud</string>
 		<key>Name</key>
-		<string>Disk Utility</string>
+		<string>Creative Cloud</string>
 		<key>NewFile</key>
-		<string>/System/Applications/Utilities/Disk Utility.app</string>
+		<string>/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.adobe.Photoshop</string>
+		<key>Name</key>
+		<string>Adobe Photoshop 2021</string>
+		<key>NewFile</key>
+		<string>/Applications/Adobe Photoshop 2021/Adobe Photoshop 2021.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>net.shinyfrog.bear</string>
+		<key>Name</key>
+		<string>Bear</string>
+		<key>NewFile</key>
+		<string>/Applications/Bear.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.installer</string>
+		<key>Name</key>
+		<string>Installer</string>
+		<key>NewFile</key>
+		<string>/System/Library/CoreServices/Installer.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>app.scriptkit</string>
+		<key>Name</key>
+		<string>Kit</string>
+		<key>NewFile</key>
+		<string>/Applications/Kit.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.shortcuts</string>
+		<key>Name</key>
+		<string>Shortcuts</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Shortcuts.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.chromium.Chromium</string>
+		<key>Name</key>
+		<string>Chromium</string>
+		<key>NewFile</key>
+		<string>~/Library/Caches/ms-playwright/chromium-1134/chrome-mac/Chromium.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.helpviewer</string>
+		<key>Name</key>
+		<string>Tips</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Tips.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.google.Chrome</string>
+		<key>Name</key>
+		<string>Google Chrome</string>
+		<key>NewFile</key>
+		<string>/Applications/Google Chrome.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.meta.virtualdesktop</string>
+		<key>Name</key>
+		<string>Meta Quest Remote Desktop</string>
+		<key>NewFile</key>
+		<string>/Applications/Meta Quest Remote Desktop.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.googlecode.iterm2</string>
+		<key>Name</key>
+		<string>iTerm</string>
+		<key>NewFile</key>
+		<string>/Applications/iTerm.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.dt.Xcode</string>
+		<key>Name</key>
+		<string>Xcode</string>
+		<key>NewFile</key>
+		<string>/Applications/Xcode.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.runningwithcrayons.Alfred-Preferences</string>
+		<key>Name</key>
+		<string>Alfred Preferences</string>
+		<key>NewFile</key>
+		<string>/Applications/Alfred 5.app/Contents/Preferences/Alfred Preferences.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.ScriptEditor2</string>
+		<key>Name</key>
+		<string>Script Editor</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Script Editor.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.tinyspeck.slackmacgap</string>
+		<key>Name</key>
+		<string>Slack</string>
+		<key>NewFile</key>
+		<string>/Applications/Slack.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.AppStore</string>
+		<key>Name</key>
+		<string>App Store</string>
+		<key>NewFile</key>
+		<string>/System/Applications/App Store.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.logitech.manager.uninstaller</string>
+		<key>Name</key>
+		<string>Logi Options Uninstaller</string>
+		<key>NewFile</key>
+		<string>/Applications/Utilities/LogiMgr Uninstaller.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.xk72.Charles</string>
+		<key>Name</key>
+		<string>Charles</string>
+		<key>NewFile</key>
+		<string>/Applications/Charles.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.ableton.live</string>
+		<key>Name</key>
+		<string>Ableton Live 12 Suite</string>
+		<key>NewFile</key>
+		<string>/Applications/Ableton Live 12 Suite.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.mail</string>
+		<key>Name</key>
+		<string>Mail</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Mail.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.virtualDesktopInc.Mac.Streamer</string>
+		<key>Name</key>
+		<string>Virtual Desktop Streamer</string>
+		<key>NewFile</key>
+		<string>/Applications/Virtual Desktop Streamer.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.logi.bolt.app</string>
+		<key>Name</key>
+		<string>Logi Bolt</string>
+		<key>NewFile</key>
+		<string>/Applications/Logi Bolt.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.logitech.unifying.assistant</string>
+		<key>Name</key>
+		<string>Logitech Unifying Software</string>
+		<key>NewFile</key>
+		<string>/Library/Application Support/Logitech.localized/Logitech Options.localized/Logitech Unifying Software.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.roli.Equator2</string>
+		<key>Name</key>
+		<string>Equator2</string>
+		<key>NewFile</key>
+		<string>/Applications/Equator2.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.roli.rolidashboard</string>
+		<key>Name</key>
+		<string>ROLI Dashboard</string>
+		<key>NewFile</key>
+		<string>/Applications/ROLI Dashboard.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.videolan.vlc</string>
+		<key>Name</key>
+		<string>VLC</string>
+		<key>NewFile</key>
+		<string>/Applications/VLC.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.electron.ollama</string>
+		<key>Name</key>
+		<string>Ollama</string>
+		<key>NewFile</key>
+		<string>/Applications/Ollama.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.BluetoothFileExchange</string>
+		<key>Name</key>
+		<string>Bluetooth File Exchange</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Bluetooth File Exchange.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Safari</string>
+		<key>Name</key>
+		<string>Safari</string>
+		<key>NewFile</key>
+		<string>/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Dictionary</string>
+		<key>Name</key>
+		<string>Dictionary</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Dictionary.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.ActivityMonitor</string>
+		<key>Name</key>
+		<string>Activity Monitor</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Utilities/Activity Monitor.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.11bitstudios.frostpunk</string>
+		<key>Name</key>
+		<string>Frostpunk</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/steamapps/common/Frostpunk/Frostpunk.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>Project Zomboid</string>
+		<key>Name</key>
+		<string>Project Zomboid</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/steamapps/common/ProjectZomboid/Project Zomboid.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.grizzlygames.thronefall</string>
+		<key>Name</key>
+		<string>Thronefall</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/steamapps/common/Thronefall/Thronefall.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string></string>
+		<key>Name</key>
+		<string>Night in the Woods</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/steamapps/common/Night in the Woods/Night in the Woods.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.calculator</string>
+		<key>Name</key>
+		<string>Calculator</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Calculator.app</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>dota2</string>
+		<key>NewFile</key>
+		<string>~/Library/Application Support/Steam/steamapps/common/dota 2 beta/game/bin/osx64/dota2.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.Music</string>
+		<key>Name</key>
+		<string>Music</string>
+		<key>NewFile</key>
+		<string>/System/Applications/Music.app</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>ui</string>
+		<key>NewFile</key>
+		<string>~/code/rust/zia/target/debug/ui</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.apple.AccessibilityInspector</string>
+		<key>Name</key>
+		<string>Accessibility Inspector</string>
+		<key>NewFile</key>
+		<string>/Applications/Xcode.app/Contents/Applications/Accessibility Inspector.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>org.chromium.Chromium</string>
+		<key>Name</key>
+		<string>Chromium</string>
+		<key>NewFile</key>
+		<string>~/.continue/.utils/.chromium-browser-snapshots/chromium/mac_arm-1355624/chrome-mac/Chromium.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>com.rusha.AccTest</string>
+		<key>Name</key>
+		<string>AccTest</string>
+		<key>NewFile</key>
+		<string>~/Library/Developer/Xcode/DerivedData/AccTest-bfgubtdnymdhbpaoqehvcomfvldb/Build/Products/Debug/AccTest.app</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>mimic</string>
+		<key>NewFile</key>
+		<string>~/code/mimic/src-tauri/target/debug/mimic</string>
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
@@ -580,11 +762,19 @@
 	</dict>
 	<dict>
 		<key>BundleIdentifier</key>
-		<string>com.apple.audio.InfoHelper</string>
+		<string>com.apple.logic10</string>
 		<key>Name</key>
-		<string>com.apple.audio.InfoHelper</string>
+		<string>Logic Pro</string>
 		<key>NewFile</key>
-		<string>/System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.InfoHelper.xpc</string>
+		<string>/Applications/Logic Pro X.app</string>
+	</dict>
+	<dict>
+		<key>BundleIdentifier</key>
+		<string>cx.c3.theunarchiver</string>
+		<key>Name</key>
+		<string>The Unarchiver</string>
+		<key>NewFile</key>
+		<string>/Applications/The Unarchiver.app</string>
 	</dict>
 </array>
 </plist>

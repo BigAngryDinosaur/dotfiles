@@ -5,17 +5,22 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+
+  -- languages --
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.swift" },
-  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.motion.flash-nvim" },
+
+  -- colorschemes --
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.nord-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.colorscheme.cyberdream-nvim" },
+
+  -- motion --
   { import = "astrocommunity.motion.mini-ai" },
-  { import = "astrocommunity.motion.mini-surround" },
-  { import = "astrocommunity.completion.avante-nvim" },
-  { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.color.ccc-nvim" },
-  { import = "astrocommunity.syntax.vim-easy-align" },
+  { import = "astrocommunity.motion.flash-nvim" },
+
   -- import/override with your plugins folder
 }

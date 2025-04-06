@@ -1,7 +1,7 @@
 import { map, mapConsumerKey, rule, to$, toKey, withModifier } from "karabiner.ts";
 import doubleTap from "./doubleTap";
 
-// Modifiers: '⌘' | '⌥' | '⌃' | '⇧'
+// Modifiers: '⌘' | '⌥' | '⌃' | '⇧' '⇧'
 
 export const generalMappings = () => [
   rule('General').manipulators([
@@ -14,12 +14,17 @@ export const generalMappings = () => [
     map('f15', '⌘').to('delete_forward'),
     map('f16').to('e', '⌃'),
     map('r', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite grammar'),
-    map('e', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite professional'),
+    map('e', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scri;ts/ai_rewrite professional'),
     map('w', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite "custom: rewrite the provided text in pirate lingo."'),
+
+
+    // Ghostty
+    map('j', { left: '⌘⌥⌃' }).to$('open -n /Applications/Ghostty.app'),
+
+    // Yazi
+    map('h', { left: '⌘⌥⌃' }).to$("open -n /Applications/Ghostty.app --args --command='/opt/homebrew/bin/yazi'"),
+
   ]),
-  doubleTap({ key_code: "right_shift" }, { key_code: "backslash", modifiers: ["left_option"] }, "Double Tap right shift to opt+backslash"),
-  doubleTap({ key_code: "left_shift" }, { key_code: "keypad_4" }, "Double Tap left shift to keypad4"),
-  doubleTap({ key_code: "left_command" }, { key_code: "keypad_5" }, "Double Tap left shift to keypad5"),
 ]
 
 
