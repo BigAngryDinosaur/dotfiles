@@ -50,11 +50,11 @@ cmd + shift + alt - 4 : yabai -m window --space  7; yabai -m space --focus 7 || 
 cmd + shift + alt - 6 : yabai -m window --space  9; yabai -m space --focus 9 || (yabai -m window --space  10; yabai -m space --focus 10)
 
 # Stack
-hyper - n : yabai -m window --stack prev
-#hyper - . : yabai -m window --stack next
-hyper - m : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
-#hyper - , : yabai -m window --focus stack.next || yabai -m window --focus stack.first
-# f15 : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
+cmd + shift + alt - 0x2F : yabai -m window --stack prev
+cmd + shift + alt - 0x2C : yabai -m window --stack next
+cmd + shift + alt - m : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+cmd + shift + alt - 0x2B : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+cmd + shift + alt - n : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
 
 # increase window size
 cmd + shift + alt - q: yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0

@@ -158,6 +158,24 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "~/.config/karabiner/scripts/ai_rewrite summarize"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "e",
                   "modifiers": {
                     "mandatory": [
@@ -169,7 +187,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "~/.config/karabiner/scri;ts/ai_rewrite professional"
+                    "shell_command": "~/.config/karabiner/scripts/ai_rewrite professional"
                   }
                 ]
               },

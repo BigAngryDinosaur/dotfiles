@@ -2,7 +2,7 @@ macos-non-native-fullscreen = true
 macos-titlebar-style = transparent
 window-padding-x = 10
 initial-window = true
-background-opacity = 0.75
+background-opacity = 0.9
 background-blur = 20
 
 macos-option-as-alt = true
@@ -16,3 +16,6 @@ quick-terminal-animation-duration = 0
 keybind = global:ctrl+cmd+shift+j=toggle_quick_terminal
 
 confirm-close-surface = false
+
+font-family = "Cartograph CF"
+font-size = 15

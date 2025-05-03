@@ -14,7 +14,8 @@ export const generalMappings = () => [
     map('f15', '⌘').to('delete_forward'),
     map('f16').to('e', '⌃'),
     map('r', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite grammar'),
-    map('e', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scri;ts/ai_rewrite professional'),
+    map('r', 'left⌘⌃⇧').to$('~/.config/karabiner/scripts/ai_rewrite summarize'),
+    map('e', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite professional'),
     map('w', { left: '⌘⌥⌃' }).to$('~/.config/karabiner/scripts/ai_rewrite "custom: rewrite the provided text in pirate lingo."'),
 
 

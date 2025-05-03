@@ -10,6 +10,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.clojure" },
 
   -- colorschemes --
   { import = "astrocommunity.colorscheme.catppuccin" },
@@ -22,5 +24,6 @@ return {
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.flash-nvim" },
 
-  -- import/override with your plugins folder
+  -- utility --
+  { import = "astrocommunity.utility.noice-nvim" },
 }
