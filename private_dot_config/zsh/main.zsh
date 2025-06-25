@@ -22,32 +22,33 @@ ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
-CONFIG_PATH=$HOME/.config/zsh
-source $CONFIG_PATH/path.zsh
-source $CONFIG_PATH/editor.zsh
-source $CONFIG_PATH/zplug.zsh
-source $CONFIG_PATH/functions.zsh
-source $CONFIG_PATH/aliases.zsh
-source $CONFIG_PATH/tools/zellij.zsh
-source $CONFIG_PATH/tools/asdf.zsh
-source $CONFIG_PATH/tools/fzf.zsh
-source $CONFIG_PATH/tools/zoxide.zsh
-source $CONFIG_PATH/tools/goenv.zsh
-source $CONFIG_PATH/tools/ghcup.zsh
-source $CONFIG_PATH/tools/nimble.zsh
-source $CONFIG_PATH/tools/atuin.zsh
-source $CONFIG_PATH/tools/jj.zsh
+CONFIG_PATH="${HOME}/.config"
+XDG_CONFIG_HOME=CONFIG_PATH
+ZSH_PATH="${CONFIG_PATH}/zsh"
 
-load_work_modules() {
-  local modules_dir="${CONFIG_PATH}/work"
-  local modules=("vibe")
+source $ZSH_PATH/path.zsh
+source $ZSH_PATH/editor.zsh
+source $ZSH_PATH/zplug.zsh
+source $ZSH_PATH/functions.zsh
+source $ZSH_PATH/aliases.zsh
 
+
+load_modules() {
+  local module_path="$1"
+  local modules_string="$2"
+
+  [[ -n "$module_path" ]] || return 1
+  [[ -n "$modules_string" ]] || return 1
+
+  local modules_dir="${ZSH_PATH}/${module_path}"
   [[ -d "$modules_dir" ]] || return 0
 
-  for module in "$modules[@]"; do
+  local modules=($modules_string)
+  for module in "${modules[@]}"; do
     local module_file="${modules_dir}/${module}.zsh"
     [[ -r "$module_file" ]] && source "$module_file"
   done
 }
 
-load_work_modules
+load_modules "tools" "zellij asdf fzf zoxide goenv ghcup nimble atuin jj"
+load_modules "work" "vibe"

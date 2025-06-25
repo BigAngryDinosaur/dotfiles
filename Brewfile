@@ -87,6 +87,7 @@ brew "jj"
 brew "unison-language"
 brew "htop"
 brew "httpie"
+brew "nushell"
 
 cask "1password-cli"
 cask "betterdisplay"
