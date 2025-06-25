@@ -3,20 +3,12 @@ macos-titlebar-style = transparent
 window-padding-x = 10
 initial-window = true
 background-opacity = 0.9
-background-blur = 40
+background-blur = 20
 
 macos-option-as-alt = true
 
 keybind = alt+left=unbind
 keybind = alt+right=unbind
-keybind = super+t=unbind
-keybind = super+n=unbind
-keybind = super+w=unbind
-keybind = super+page_up=unbind
-keybind = super+page_down=unbind
-keybind = super+home=unbind
-keybind = super+end=unbind
-keybind = super+t=unbind
 
 
 quick-terminal-position = center
@@ -27,4 +19,3 @@ confirm-close-surface = false
 
 font-family = "Cartograph CF"
 font-size = 15
-keybind = shift+enter=text:\n

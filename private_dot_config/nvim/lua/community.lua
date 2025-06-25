@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.pack.clojure" },
+  { import = "astrocommunity.pack.nim" },
 
   -- colorschemes --
   { import = "astrocommunity.colorscheme.catppuccin" },

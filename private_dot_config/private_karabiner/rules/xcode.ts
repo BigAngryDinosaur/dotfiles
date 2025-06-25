@@ -8,7 +8,7 @@ import { km } from "../utils.ts"
 
 export default function app_xcode() {
   return rule('XCode', ifApp('^com.apple.dt.Xcode$')).manipulators([
-    withModifier('right_shift')({
+    withModifier('⌥⌃⇧')({
       'a': toKey('←', '⌘⌃'), // Back
       'd': toKey('→', '⌘⌃'), // Forward
 

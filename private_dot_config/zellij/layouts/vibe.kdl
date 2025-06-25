@@ -1,0 +1,25 @@
+layout {
+  // Root
+  pane split_direction="vertical" {
+    // Info
+    pane split_direction="horizontal" {
+      pane name="Task List" command="$EDITOR" {
+        args ".zzz/task-1/todo-list.md"
+      }
+      pane name="Overseer" command="zsh" {
+        args "-i" "-c" "v codex"
+      }
+      pane name="Review" command="$EDITOR" {
+        args ".zzz/task-1/review.md"
+      }
+    }
+
+    // Main
+    pane split_direction="horizontal" size="70%" {
+      pane size="60%" name="Editor" command="$EDITOR"
+      pane size="40%" name="Commander" command="zsh" {
+        args "-i" "-c" "v claude"
+      }
+    }
+  }
+}

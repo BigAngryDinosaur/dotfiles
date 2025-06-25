@@ -36,5 +36,18 @@ source $CONFIG_PATH/tools/goenv.zsh
 source $CONFIG_PATH/tools/ghcup.zsh
 source $CONFIG_PATH/tools/nimble.zsh
 source $CONFIG_PATH/tools/atuin.zsh
+source $CONFIG_PATH/tools/jj.zsh
 
+load_work_modules() {
+  local modules_dir="${CONFIG_PATH}/work"
+  local modules=("vibe")
 
+  [[ -d "$modules_dir" ]] || return 0
+
+  for module in "$modules[@]"; do
+    local module_file="${modules_dir}/${module}.zsh"
+    [[ -r "$module_file" ]] && source "$module_file"
+  done
+}
+
+load_work_modules

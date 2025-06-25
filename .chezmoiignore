@@ -7,3 +7,4 @@
 .config/fabric/.env
 
 .config/superwhisper/recordings
+.config/zsh/work/

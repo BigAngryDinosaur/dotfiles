@@ -25,9 +25,8 @@ yabai -m signal --add label=unmanagedAndCenteredApps event=window_created app='^
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Obsidian$" manage=off
 yabai -m rule --add app="^Reader$" manage=off
-yabai -m rule --add app="^ChatGPT$" manage=off 
-yabai -m rule --add app="^Claude$" manage=off 
-yabai -m rule --add app="^Google AI Studio$" manage=off
+yabai -m rule --add app="^Spotify$" scratchpad="Spotify" sticky=on
+yabai -m rule --add app="^Slack$" scratchpad="Slack" sticky=on
 
 yabai -m rule --apply
 
