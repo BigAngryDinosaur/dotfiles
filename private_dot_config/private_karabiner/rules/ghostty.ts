@@ -14,18 +14,22 @@ export default function app_ghostty() {
 
   return rule('Ghostty', ifApp('^com.mitchellh.ghostty$')).manipulators([
     withModifier('⌥⌃⇧')({
-      'f': [toKey('g', modifier), toKey('f')],
-      'c': [toKey('g', modifier), toKey('d')],
-      'v': [toKey('g', modifier), toKey('r')],
-      'x': [toKey('g', modifier), toKey('x')],
-      't': [toKey('t', modifier), toKey('n')],
-      'e': toKey('h', modifier),
-      'r': toKey('n', modifier),
-      'b': [toKey('g', modifier), toKey('i')],
+      'f': [toKey('g', modifier), toKey('f')], // Focus
+      'g': [toKey('g', modifier), toKey('d')], // Split Down
+      'x': [toKey('g', modifier), toKey('x')], // Close
+      't': [toKey('t', modifier), toKey('n')], // New Tab
+      'e': toKey('h', modifier),               // Move
+      'r': toKey('n', modifier),               // Resize
+      's': [toKey('s', modifier), toKey('e')], // Edit
+
+      'v': toKey('=', "left_option"), // Edit
+      'c': toKey('-', "left_option"), // Edit
     }),
 
-    withModifier('⌥⌃⇧')({
-
+    withModifier('⌘⌃⇧')({
+      'g': [toKey('g', modifier), toKey('r')], // Split Right
+      's': toKey('s', modifier),               // Search
+      'e': [toKey('g', modifier), toKey('i')], // Pin
     })
   ])
-}
+} toKey

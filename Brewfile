@@ -88,6 +88,8 @@ brew "unison-language"
 brew "htop"
 brew "httpie"
 brew "nushell"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+
 
 cask "1password-cli"
 cask "betterdisplay"

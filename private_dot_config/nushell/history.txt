@@ -1,0 +1,479 @@
+config nu
+ls
+ls -la
+clear
+ls -la
+z .config
+cd .config
+ls -la
+cler
+clear
+c
+clear
+ls | sort-by size
+ls | sort-by size | reverse
+ls | where size > 100b
+ps
+ps | where status == Running
+ls
+ls 
+ls <\n>| where size > 100b<\n>| get name
+ls <\n>| sort-by size
+config nu
+$env.config
+config nu
+exit
+env nu
+env
+config nu
+ls
+ls | w
+ls | where size > 100b
+clear
+l
+ls
+eza
+lt
+which eza
+clear
+config nu
+cd .config
+cd nushell/
+l
+ls
+mkdir scripts
+ls
+cd scripts/
+l
+touch eza.nu
+fe
+lt
+exit
+eza -la
+eza -la --icons
+eza -T
+cd .config
+eza -t
+eza -T
+eza -T --icons
+l
+nvim eza.nu
+l
+ls
+alias
+l
+$nu.user-autoload-dirs
+..
+l
+ls
+mv scripts autoload
+l
+cd .config
+lt
+clear
+which jj
+l
+clear
+cm cd
+l
+cd zsh
+l
+e main.zsh
+nvim main.zsh
+l
+clear
+l
+ls
+clear
+l
+ls
+clear
+glg
+cler
+clear
+l
+brew install television
+tv fes
+cd .config
+tv files
+l
+cd nushell/
+l
+$nu.data-dir
+$nu.cache-dir
+$nu.user-autoload-dirs
+exit
+clear
+config nu
+exit
+config nu
+exit
+config nu
+e
+config nu
+cd .config
+l
+cd zsh
+tv init nu
+brew uninstall television
+cd
+l
+cd apps/l
+cd apps
+ls
+gcl git@github.com:alexpasmantier/television.git
+git clone git@github.com:alexpasmantier/television.git
+cd television/
+l
+cargo build --release
+l
+pwd
+$env.PATH
+$env.HOME
+pwd
+l target/release/tv
+config nu
+$env.HOME/apps
+$env.HOME | path join apps/television/target/release/tv
+($env.HOME | path join apps/television/target/release/tv)
+($env.HOME | path join apps/television/target/release/tv) init 
+`($env.HOME | path join apps/television/target/release/tv)`
+^($env.HOME | path join apps/television/target/release/tv)
+config nu
+tv files
+tv
+television | files
+clear
+cd 
+cd apps/television/
+l
+glg
+git log
+./target/release/tv
+$tv
+$tv
+^$tv
+tv
+tv env
+clear
+e ~/.config/nushell/config.nu
+c
+^$tv init nu
+^$tv init nu
+cd
+cd .config
+cd nushell/
+l
+e config.nu
+tv --autocomplete-prompt
+^$tv --autocomplete-prompt
+^$tvcommand --autocomplete-prompt
+"($env.HOME)/apps"
+$env.HOME/apps
+^$tvcommand --autocomplete-prompt
+tv
+cd .config 
+/
+cd -
+cd nushell
+l
+tv
+e
+l
+config nu
+ls | tv
+eza | tv
+exit
+cd .config
+ls **/*
+ls **/* | get name
+ls **/* | get name | tv
+ls **/* | get name | tv | nvim
+ls **/* | get name | tv 
+eza --
+eza -r
+l
+lcear
+clear
+l
+eza | tv
+tv files
+tv files | nvim
+tv --help
+│  15 │ ps                                                              │
+clear
+config nu
+$nu.data-dir
+cd $nu.data-dir
+ls
+cd vendor/
+ls
+cd autoload/
+l
+commandline
+clear
+commandline get-cursor 
+hello
+commandline
+tv nu-history
+nu-history
+history
+clear
+history
+history | tv
+tv nu-history
+tv nu-history | str trim
+tv nu-history | get name
+history | get name
+history
+history | get command
+tv nu-history | get command
+history | get command | tv
+history | get command | tv | str trim
+history | get command 
+history | get command | tv 
+history | get command | tv | str capitalize 
+eza | tv
+eza | tv | str capitalize
+history 
+history | get command
+history | get command | tv 
+eza | tv 
+ls **/* | get name 
+cd .config
+ls **/* | get name 
+ls **/* | get name | values
+ls **/* | get name | to text
+ls **/* | get name | to text | tv
+ls **/* | get name | to text | tv | nvim
+let file = ls **/* | get name | to text | tv | nvim
+cd .config
+history
+clear
+cd $nu.data-dir
+cd vendor/autoload/
+e tv.nu
+exit
+l
+exit
+cd .config
+cd nvim
+fe
+e lua/community.lua
+which e
+e
+e lua/community.lua
+l
+cd .config/nvim/
+e lua/community.lua
+stack build
+stack ghci
+fe
+e package.yaml
+stack build
+fe
+e package.yaml
+stack build
+..
+l
+cd json-parser/
+e stack.yaml
+ghcup
+ghcup list
+e stack.yaml
+stack build
+v claude
+exit
+npm install -g @google/gemini-cli
+gemini
+gcloud auth application-default login
+clear
+l
+cd .config
+fd
+fg --help
+fd --help
+l
+..
+l
+fe
+exit
+cd .config
+cd nvim
+l
+lt
+e lua/community.lua
+cd .config
+cd nvim
+l
+..
+e lua/community.lua
+e lua/plugins/mini-move.lua
+fg --help
+fd --help
+cd .config
+l
+cd karabiner/
+l
+e rules/ghostty.ts
+cd .config/karabiner
+l
+clear
+l
+cd .config
+l
+cd zellij/
+l
+bun run dev
+clear
+cd .config
+fd -t f .
+c
+fd -t f . | tv --preview 'bat -n --color=always {0}'
+cd nushell/
+l
+cd autoload/
+l
+touch tv.nu
+fe
+cd .config
+fe
+cd .config
+cd nvim
+fe
+atuin
+l ~/.local/share/atuin/
+e tv.nu
+l
+..
+.
+fe
+exit
+cd .config/nushell/
+fe
+atuin init nu | save ~/.local/share/atuin/init.nu
+atuin
+atuin history
+atuin history list
+cd $nu.data-dir
+l
+fe
+cd $nu.data-dir
+which fe
+fe
+fe
+cd .config
+cd $nu.data-dir
+cd conf
+cd con
+cd
+gb
+gd
+cd $env.env-path
+config env
+cd .config
+cd
+cd $nu.data-dir
+cd
+z con
+z nushel
+cd
+clear
+z confhg
+z /Users/rusha/apps/glance/config
+z /Users/rusha/code/haskell
+config nu
+z code
+l
+cd haskell/blackjack/
+l
+z /Users/rusha/.local/share/chezmoi
+git stat
+git status
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+e Brewfile
+cd
+cd .config/nushell/
+l
+(brew --prefix oh-my-posh | str trim)
+cd (brew --prefix oh-my-posh | str trim)
+l
+lt
+clear
+cd (brew --prefix oh-my-posh | str trim)
+cd (brew --prefix oh-my-posh | str trim)/themes
+l
+clear
+z config
+z /Users/rusha/code/haskell
+gst
+git status
+cd blackjack/
+l
+git status
+l
+..
+l
+cd json-parser/
+ls
+clear
+l
+z config
+cd nushell/
+l
+z json
+clear
+l
+clear
+ls
+l
+z json
+cleaa
+c
+l
+ls
+l
+z /Users/rusha/.config/karabiner
+l
+fe
+z config
+fe
+z black
+l
+z json
+l
+clear
+pwd
+z themese
+z theme
+l
+fe
+l
+ls
+wc 
+z /Users/rusha/code/haskell/json-parser
+l
+z json
+l
+clear
+l
+clear
+l
+exit
+cler
+c
+clear
+exit
+c
+z /Users/rusha/code/haskell/json-parser
+l
+ls
+clear
+l
+ls
+l
+cd
+cd .config
+l
+which cma
+cm cd

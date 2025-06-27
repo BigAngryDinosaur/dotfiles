@@ -1014,7 +1014,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "c",
+                  "key_code": "g",
                   "modifiers": {
                     "mandatory": [
                       "option",
@@ -1033,39 +1033,6 @@
                   },
                   {
                     "key_code": "d"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "^com.mitchellh.ghostty$"
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "v",
-                  "modifiers": {
-                    "mandatory": [
-                      "option",
-                      "control",
-                      "shift"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "g",
-                    "modifiers": [
-                      "left_command",
-                      "left_control"
-                    ]
-                  },
-                  {
-                    "key_code": "r"
                   }
                 ],
                 "conditions": [
@@ -1206,10 +1173,164 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "b",
+                  "key_code": "s",
                   "modifiers": {
                     "mandatory": [
                       "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_command",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "e"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.mitchellh.ghostty$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": [
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "equal_sign",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.mitchellh.ghostty$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "option",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.mitchellh.ghostty$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "g",
+                    "modifiers": [
+                      "left_command",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "r"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.mitchellh.ghostty$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "control",
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_command",
+                      "left_control"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com.mitchellh.ghostty$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
                       "control",
                       "shift"
                     ]
